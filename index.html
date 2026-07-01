@@ -9,8 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#0D2D5E;--navy-deep:#071A38;--blue:#1B9BD1;--blue-soft:#5BB8E0;
-  --asphalt:#0A0A0C;--concrete:#15151A;--court:#22222A;--bone:#F4F1EA;--chalk:#D8D4C8;
+  --navy:#0D2D5E;--navy-deep:#071A38;--blue:#0099D1;--blue-soft:#5BB8E0;
+  --asphalt:#0A0A0C;--concrete:#121217;--court:#1B1B22;--bone:#F4F1EA;--chalk:#D8D4CB;--chalk-dim:#A8A49B;
+  --line:rgba(244,241,234,0.10);--line-soft:rgba(244,241,234,0.06);
   --moss:#7BAA3E;--canopy:#D4FF3D;--terracotta:#C4521F;--hazard:#FF5A1F;--rust:#8B3A1A;--clay:#FFB627;--jet-pink:#FF2D7A;--plum:#5C2D6E;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -121,7 +122,7 @@ a{color:inherit}
 .chan:hover .chan-go .arr{transform:translateX(5px)}
 
 /* ===== STRATEGY BRIDGE (the big CTA) ===== */
-.strat{margin-top:8px;padding:48px;background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 100%);border:1px solid var(--blue);position:relative;overflow:hidden}
+.strat{margin-top:8px;padding:48px;background:linear-gradient(160deg,#14141a 0%,#0c0c10 100%);border:1px solid var(--blue);position:relative;overflow:hidden}
 .strat::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.04) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
 .strat svg{position:absolute;top:-30px;right:-30px;width:260px;height:260px;opacity:0.35;pointer-events:none}
 .strat>*{position:relative;z-index:2}
@@ -206,7 +207,7 @@ a{color:inherit}
 .aud-size{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;color:var(--clay)}
 
 /* BUDGET INTERACTIVE */
-.budget{margin-top:30px;padding:28px;background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 100%);border:1px solid var(--blue);position:relative;overflow:hidden}
+.budget{margin-top:30px;padding:28px;background:linear-gradient(160deg,#14141a 0%,#0c0c10 100%);border:1px solid var(--blue);position:relative;overflow:hidden}
 .budget::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.04) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
 .budget>*{position:relative;z-index:2}
 .budget-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px}
@@ -256,7 +257,7 @@ a{color:inherit}
 .neg-row .v{color:var(--chalk);opacity:0.9}
 .neg-row .v .ng{font-family:'JetBrains Mono',monospace;color:var(--bone)}
 
-.rec{margin-top:24px;padding:26px;background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 100%);border:1px solid var(--canopy);position:relative;overflow:hidden}
+.rec{margin-top:24px;padding:26px;background:linear-gradient(160deg,#14141a 0%,#0c0c10 100%);border:1px solid var(--canopy);position:relative;overflow:hidden}
 .rec::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.04) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
 .rec>*{position:relative;z-index:2}
 .rec-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--canopy);margin-bottom:10px}
@@ -286,7 +287,7 @@ a{color:inherit}
 .res-d{font-size:12.5px;line-height:1.5;color:var(--chalk);opacity:0.78}
 .res-link{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--canopy);margin-top:10px;display:inline-block;word-break:break-all}
 
-.next{margin-top:30px;padding:40px;background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 100%);border:1px solid var(--blue);position:relative;overflow:hidden}
+.next{margin-top:30px;padding:40px;background:linear-gradient(160deg,#14141a 0%,#0c0c10 100%);border:1px solid var(--blue);position:relative;overflow:hidden}
 .next::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.04) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
 .next>*{position:relative;z-index:2}
 .next-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--canopy);margin-bottom:12px}
@@ -322,7 +323,8 @@ a{color:inherit}
       <button class="ntab" data-view="worksheet" onclick="showView('worksheet')">Targeting Worksheet</button>
       <a class="ntab" href="https://impactable.marketing/linkedin-launch.html" target="_blank" rel="noopener">LinkedIn Launch <span class="ext">↗</span></a>
       <a class="ntab" href="https://impactable.marketing/google.html" target="_blank" rel="noopener">LinkedIn + Google <span class="ext">↗</span></a>
-      <a class="ntab-cta" href="https://impactable.com/paid-ads/" target="_blank" rel="noopener">Strategy Build →</a>
+      <a class="ntab" href="https://landbot.online/v3/H-2201417-SPMOARYH76NAHLP2/index.html" target="_blank" rel="noopener">Book a Call <span class="ext">↗</span></a>
+      <a class="ntab-cta" href="https://impactable.marketing/intelligence-room.html" target="_blank" rel="noopener">Strategy Build →</a>
     </div>
   </div>
 </nav>
@@ -339,7 +341,7 @@ a{color:inherit}
     <p class="hero-sub">This room holds the diagnostics Impactable built for Clear Raven, and the path they open. The white space named the position: <strong>no gates, better workflow, aimed at the operator already shopping for a way out of a gated incumbent.</strong> Below: the audience plan that turns that thesis into a build, the channels it runs across, and the strategy engagement that makes it launch-ready.</p>
     <div class="hero-cta">
       <button class="btn btn-primary" onclick="showView('worksheet')">Open the targeting worksheet →</button>
-      <a class="btn btn-ghost" href="Clear_Raven_Targeting_Worksheet.docx" download>Download the DOCX ↓</a>
+      <a class="btn btn-ghost" href="https://docs.google.com/document/d/1QFexURtt92Ot1tXaqCcLmjiGwFeTDUOiNCi40VfiHA8/edit" target="_blank" rel="noopener">Open the targeting doc ↗</a>
     </div>
     <div class="hero-meta" style="margin-top:32px">
       <span>Prepared by <strong>Impactable</strong></span>
@@ -353,7 +355,7 @@ a{color:inherit}
   <section class="sec">
     <div class="sec-num">01 / What's in this room</div>
     <h2 class="sec-title">Delivered. And <em>what it unlocks.</em></h2>
-    <p class="sec-intro">Two diagnostics are already built and sitting in this room. The third item is the step they were designed to earn: a customized strategy build that turns the plan into a launch-ready system.</p>
+    <p class="sec-intro">The diagnostics are already built and sitting in this room, the targeting worksheet, the shareable audience-targeting doc, and the competitor intel behind the switcher thesis. The last item is the step they were designed to earn: a customized strategy build that turns the plan into a launch-ready system.</p>
     <div class="room-cards">
       <div class="rc delivered">
         <div class="rc-status">Delivered</div>
@@ -365,10 +367,18 @@ a{color:inherit}
       </div>
       <div class="rc delivered">
         <div class="rc-status">Delivered</div>
-        <div class="rc-h">The Shareable DOCX</div>
-        <div class="rc-d">The same worksheet as a branded, leave-behind document, built to circulate internally at Clear Raven: personas, keyword architecture, negative keywords, budget framework, and the 90-day launch order.</div>
+        <div class="rc-h">The Audience Targeting Doc</div>
+        <div class="rc-d">The same audience plan as a branded, shareable document, built to circulate internally at Clear Raven: personas, keyword architecture, negative keywords, budget framework, and the 90-day launch order.</div>
         <div class="rc-foot">
-          <a class="rc-link solid-b" href="Clear_Raven_Targeting_Worksheet.docx" download>Download ↓</a>
+          <a class="rc-link solid-b" href="https://docs.google.com/document/d/1QFexURtt92Ot1tXaqCcLmjiGwFeTDUOiNCi40VfiHA8/edit" target="_blank" rel="noopener">Open the doc ↗</a>
+        </div>
+      </div>
+      <div class="rc delivered">
+        <div class="rc-status">Delivered</div>
+        <div class="rc-h">The Competitor Intel Doc</div>
+        <div class="rc-d">The switcher thesis, evidenced. Where UpKeep, MaintainX, Fiix, and Limble gate, meter, and price-creep, and the white space Clear Raven owns against each. The intelligence behind the conquest layer.</div>
+        <div class="rc-foot">
+          <a class="rc-link solid-b" href="https://docs.google.com/document/d/1Zwh8ZWE2z-AKu_Rf6AMtrBN5sZHxIebals4esfk6xOA/edit" target="_blank" rel="noopener">Open the doc ↗</a>
         </div>
       </div>
       <div class="rc next">
@@ -433,7 +443,8 @@ a{color:inherit}
           <div class="price-label">/// strategy engagement</div>
           <div class="price-num">$1.5k</div>
           <div class="price-note">+ 15% of ad budget<br>$3k/mo minimum spend</div>
-          <a class="btn btn-primary" href="https://impactable.com/paid-ads/" target="_blank" rel="noopener">Start the Strategy Build →</a>
+          <a class="btn btn-primary" href="https://impactable.marketing/intelligence-room.html" target="_blank" rel="noopener">Start the Strategy Build →</a>
+          <a class="btn btn-blue" href="https://landbot.online/v3/H-2201417-SPMOARYH76NAHLP2/index.html" target="_blank" rel="noopener" style="margin-top:10px">Book a call →</a>
         </div>
       </div>
       <p class="strat-fine">Figures reflect Impactable's Strategic tier (accounts up to $25k/mo). Final scope and inclusions are confirmed on a short call. Numbers here are indicative, not a quote.</p>
@@ -484,8 +495,9 @@ a{color:inherit}
       <div class="next-h">Audiences are set. Now the <em>system.</em></div>
       <p class="next-body">The natural next move is the Strategy Build: the message and offer architecture, the marketing mix, and the signal infrastructure that make the switcher thesis land, customized to Clear Raven. Create. Connect. Capture.</p>
       <div class="hero-cta" style="margin-top:0">
-        <a class="btn btn-primary" href="https://impactable.com/paid-ads/" target="_blank" rel="noopener">Start the Strategy Build →</a>
-        <button class="btn btn-blue" onclick="showView('worksheet')">Revisit the worksheet →</button>
+        <a class="btn btn-primary" href="https://impactable.marketing/intelligence-room.html" target="_blank" rel="noopener">Start the Strategy Build →</a>
+        <a class="btn btn-blue" href="https://landbot.online/v3/H-2201417-SPMOARYH76NAHLP2/index.html" target="_blank" rel="noopener">Book a call →</a>
+        <button class="btn btn-ghost" onclick="showView('worksheet')">Revisit the worksheet →</button>
       </div>
     </div>
   </section>
@@ -506,8 +518,9 @@ a{color:inherit}
   <div class="wsbar">
     <a class="back" onclick="showView('overview')">‹ Back to the room</a>
     <div class="sp">
-      <a class="btn btn-ghost" href="Clear_Raven_Targeting_Worksheet.docx" download style="padding:12px 18px;font-size:11px">Download DOCX ↓</a>
-      <a class="btn btn-primary" href="https://impactable.com/paid-ads/" target="_blank" rel="noopener" style="padding:12px 18px;font-size:11px">Strategy Build →</a>
+      <a class="btn btn-ghost" href="https://docs.google.com/document/d/1QFexURtt92Ot1tXaqCcLmjiGwFeTDUOiNCi40VfiHA8/edit" target="_blank" rel="noopener" style="padding:12px 18px;font-size:11px">Targeting doc ↗</a>
+      <a class="btn btn-blue" href="https://landbot.online/v3/H-2201417-SPMOARYH76NAHLP2/index.html" target="_blank" rel="noopener" style="padding:12px 18px;font-size:11px">Book a call →</a>
+      <a class="btn btn-primary" href="https://impactable.marketing/intelligence-room.html" target="_blank" rel="noopener" style="padding:12px 18px;font-size:11px">Strategy Build →</a>
     </div>
   </div>
 
@@ -764,8 +777,9 @@ a{color:inherit}
       <div class="next-h">Turn this audience plan into a <em>launch-ready system.</em></div>
       <p class="next-body">The message and offer architecture per persona, the marketing mix and budget distribution, and the signal and ABM infrastructure that make the no-gating thesis land. That is the Strategy Build. Create. Connect. Capture.</p>
       <div class="hero-cta" style="margin-top:0">
-        <a class="btn btn-primary" href="https://impactable.com/paid-ads/" target="_blank" rel="noopener">Start the Strategy Build →</a>
-        <button class="btn btn-blue" onclick="showView('overview')">Back to the room →</button>
+        <a class="btn btn-primary" href="https://impactable.marketing/intelligence-room.html" target="_blank" rel="noopener">Start the Strategy Build →</a>
+        <a class="btn btn-blue" href="https://landbot.online/v3/H-2201417-SPMOARYH76NAHLP2/index.html" target="_blank" rel="noopener">Book a call →</a>
+        <button class="btn btn-ghost" onclick="showView('overview')">Back to the room →</button>
       </div>
     </div>
   </section>
