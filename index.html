@@ -310,6 +310,124 @@ a{color:inherit}
   .neg-row,.aud-row{grid-template-columns:1fr}
   .strat{padding:32px 24px}
 }
+
+/* ===== COMPETITOR INTEL: full white-space report ===== */
+.sub-title.plain{display:block}
+.sub-title em{color:var(--canopy);font-style:italic}
+.sub-title .terra{color:var(--terracotta);font-style:italic}
+
+/* THESIS / UVP block */
+.uvp{padding:42px;background:linear-gradient(160deg,#14141a 0%,#0c0c10 100%);border:1px solid var(--blue);margin-top:30px;position:relative;overflow:hidden}
+.uvp::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.04) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
+.uvp svg{position:absolute;top:-30px;right:-30px;width:220px;height:220px;opacity:0.4;pointer-events:none}
+.uvp-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;position:relative;z-index:2}
+.uvp-statement{font-family:'Archivo Black',sans-serif;font-size:clamp(22px,2.6vw,32px);line-height:1.05;letter-spacing:-0.02em;text-transform:uppercase;color:var(--bone);position:relative;z-index:2}
+.uvp-statement .em{color:var(--canopy);font-style:italic}
+.uvp-statement .blue{color:var(--blue)}
+
+/* COMPETITOR CARDS */
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px;margin-top:8px}
+.comp-card{padding:26px 24px;background:var(--concrete);border-top:3px solid var(--blue);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.comp-card::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.03) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
+.comp-card>*{position:relative;z-index:2}
+.comp-card.t1{border-color:var(--blue)}
+.comp-card.t1b{border-color:var(--terracotta)}
+.comp-card.t2{border-color:var(--clay)}
+.comp-card.t3{border-color:var(--chalk)}
+.comp-tier{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.comp-card.t1b .comp-tier{color:var(--terracotta)}
+.comp-card.t2 .comp-tier{color:var(--clay)}
+.comp-card.t3 .comp-tier{color:var(--chalk)}
+.comp-name{font-family:'Archivo Black',sans-serif;font-size:23px;text-transform:uppercase;letter-spacing:-0.015em;line-height:1;margin-bottom:4px}
+.comp-url{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--chalk);opacity:0.5;margin-bottom:14px;letter-spacing:0.04em}
+.comp-pos{font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:var(--blue-soft);line-height:1.35;margin-bottom:14px}
+.comp-row{display:flex;gap:10px;font-size:12.5px;line-height:1.5;padding:7px 0;border-top:1px solid var(--court)}
+.comp-row .k{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--chalk);opacity:0.55;min-width:74px;flex-shrink:0;padding-top:2px}
+.comp-row .v{color:var(--chalk);opacity:0.9}
+.comp-take{margin-top:14px;padding:14px;background:var(--asphalt);border-left:2px solid var(--canopy);font-size:12.5px;line-height:1.55;color:var(--bone)}
+.comp-card.t1b .comp-take{border-left-color:var(--terracotta)}
+.comp-take .lbl{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--canopy);display:block;margin-bottom:5px}
+.comp-card.t1b .comp-take .lbl{color:var(--terracotta)}
+
+/* MATRIX TABLE */
+.matrix-wrap{overflow-x:auto;margin-top:8px;border:1px solid var(--court)}
+table.matrix{width:100%;border-collapse:collapse;font-size:12px;min-width:760px}
+table.matrix th,table.matrix td{padding:12px 12px;text-align:left;border-bottom:1px solid var(--court);border-right:1px solid var(--court);vertical-align:top;line-height:1.4}
+table.matrix th{background:#14141a;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--bone);font-weight:700}
+table.matrix td:first-child{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:var(--chalk);opacity:0.7;background:var(--concrete)}
+table.matrix td{color:var(--chalk);opacity:0.92}
+table.matrix tr:nth-child(even) td:not(:first-child){background:rgba(255,255,255,0.012)}
+.gate-yes{color:var(--terracotta);font-weight:700}
+.gate-none{color:var(--canopy);font-weight:700}
+
+/* SATURATION TABLE */
+.sat-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+.sat-table th,.sat-table td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--court);vertical-align:top;line-height:1.45}
+.sat-table th{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--terracotta);border-bottom:1px solid var(--terracotta)}
+.sat-table td{color:var(--chalk);opacity:0.88}
+.sat-table td.theme{font-weight:700;color:var(--bone);opacity:1}
+.sat-pill{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:3px 9px;background:rgba(196,82,31,0.15);color:var(--hazard);border:1px solid var(--terracotta);white-space:nowrap}
+
+/* WHITE SPACE cards */
+.ws-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px}
+.ws-card{padding:28px;background:var(--concrete);border-left:3px solid var(--canopy);position:relative;overflow:hidden}
+.ws-card::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.025) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
+.ws-card.warn{border-left-color:var(--terracotta)}
+.ws-card>*{position:relative;z-index:2}
+.ws-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.ws-no{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--moss);letter-spacing:0.1em}
+.ws-card.warn .ws-no{color:var(--terracotta)}
+.ws-name{font-family:'Archivo Black',sans-serif;font-size:21px;text-transform:uppercase;letter-spacing:-0.015em;line-height:1.05}
+.ws-name .em{color:var(--canopy)}
+.ws-card.warn .ws-name .em{color:var(--hazard)}
+.ws-size{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;background:rgba(212,255,61,0.12);color:var(--canopy);border:1px solid var(--moss)}
+.ws-card.warn .ws-size{background:rgba(196,82,31,0.14);color:var(--hazard);border-color:var(--terracotta)}
+.ws-line{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:9px 0;font-size:13.5px;line-height:1.55;border-top:1px solid var(--court)}
+.ws-line .k{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--chalk);opacity:0.55;padding-top:3px;min-width:90px}
+.ws-line .v{color:var(--chalk);opacity:0.92}
+
+/* HOOK / pain blocks */
+.hooks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:8px}
+.hook-col{padding:26px;background:var(--concrete);border-top:3px solid var(--blue)}
+.hook-col.aware{border-color:var(--canopy)}
+.hook-col.engaged{border-color:var(--terracotta)}
+.hook-stage{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+.hook-col.aware .hook-stage{color:var(--moss)}
+.hook-col.engaged .hook-stage{color:var(--terracotta)}
+.hook-sub{font-size:12px;color:var(--chalk);opacity:0.6;margin-bottom:16px}
+.hook{font-family:'Fraunces',serif;font-style:italic;font-size:15.5px;line-height:1.4;color:var(--bone);padding:12px 0;border-top:1px solid var(--court)}
+
+/* PAIN table */
+.pain-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+.pain-table th,.pain-table td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--court);vertical-align:top;line-height:1.5}
+.pain-table th{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);border-bottom:1px solid var(--blue)}
+.pain-table td{color:var(--chalk);opacity:0.9}
+.pain-table td.quote{font-family:'Fraunces',serif;font-style:italic;color:var(--bone);opacity:1}
+.pain-table td.win{color:var(--canopy)}
+
+/* TARGETING */
+.target-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:8px}
+.tcol{padding:24px;background:var(--concrete);border-top:3px solid var(--moss)}
+.tcol.sec2{border-color:var(--blue)}
+.tcol.low{border-color:var(--terracotta)}
+.tcol-h{font-family:'Archivo Black',sans-serif;font-size:16px;text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:14px;color:var(--moss)}
+.tcol.sec2 .tcol-h{color:var(--blue)}
+.tcol.low .tcol-h{color:var(--terracotta)}
+.tcol li{list-style:none;font-size:13px;line-height:1.5;color:var(--chalk);opacity:0.88;padding:10px 0 10px 18px;position:relative;border-top:1px solid var(--court)}
+.tcol li::before{content:'';position:absolute;left:0;top:17px;width:9px;height:2px;background:var(--moss)}
+.tcol.sec2 li::before{background:var(--blue)}
+.tcol.low li::before{background:var(--terracotta)}
+
+/* TAKEAWAYS */
+.take-list{margin-top:8px}
+.take{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--court);align-items:start}
+.take-n{font-family:'Archivo Black',sans-serif;font-size:30px;color:var(--court);line-height:0.8;min-width:42px}
+.take.hot .take-n{color:var(--canopy)}
+.take.warn .take-n{color:var(--terracotta)}
+.take-body{font-size:14.5px;line-height:1.6;color:var(--chalk);opacity:0.9}
+.take-body strong{color:var(--bone);font-weight:700}
+.take.hot .take-body strong{color:var(--canopy)}
+.take.warn .take-body strong{color:var(--hazard)}
 </style>
 </head>
 <body>
@@ -444,70 +562,378 @@ a{color:inherit}
 
   <!-- HERO -->
   <section class="hero" style="padding-top:40px">
-    <span class="tag">Competitor intelligence · prepared for Clear Raven</span>
-    <h1>The <span class="canopy">switcher</span> thesis,<br><span class="blue">evidenced.</span></h1>
-    <p class="hero-sub">The CMMS category is crowded, but it is not closed. The incumbents, <strong>UpKeep, MaintainX, Fiix, and Limble,</strong> win on brand and budget, then lose the operator at the wall: per-user fees, feature gating by tier, multi-site paywalls, and a guided-demo funnel that hides the product. That wall is Clear Raven's opening. <strong>No gates, better workflow, transparent pricing,</strong> aimed squarely at the buyer already shopping for a way out.</p>
+    <span class="tag">Competitive intelligence · prepared for Clear Raven</span>
+    <h1>Everyone says <span class="outline">easy.</span><br>Nobody says <span class="canopy">no gates.</span></h1>
+    <p class="hero-sub">Ten CMMS competitors. One sentence between all of them: <strong>easy to use, reduce downtime, prove ROI.</strong> The category is messaging-saturated to the point of noise. Clear Raven's two real differentiators, a genuinely better workflow and no feature gating, sit directly on top of the two largest unclaimed seams in the market. This is the map of where to stand.</p>
     <div class="hero-meta">
-      <span>Incumbents <strong>UpKeep · MaintainX · Fiix · Limble</strong></span>
-      <span>Category <strong>CMMS / maintenance</strong></span>
-      <span>Anchor <strong>the switcher thesis</strong></span>
-      <span>Source <strong>competitor intel doc</strong></span>
+      <span>Scope <strong>10 competitors</strong></span>
+      <span>Method <strong>positioning · pricing · proof · gating</strong></span>
+      <span>Prepared for <strong>Luke Nelson</strong></span>
+      <span>Date <strong>June 30, 2026</strong></span>
     </div>
   </section>
 
-  <!-- WHITE SPACE -->
-  <section class="sec">
-    <div class="sec-num">01 / The open lanes</div>
-    <h2 class="sec-title">Four places the incumbents <em>leave the door open.</em></h2>
-    <p class="sec-intro">Each lane is a pattern the category has trained buyers to resent. Clear Raven's positioning is built to occupy all four at once, and each maps to a persona and a message in the <a class="kb" onclick="showView('worksheet')" style="cursor:pointer">audience worksheet</a>.</p>
-    <div class="aud-grid">
-      <div class="aud-card">
-        <div class="aud-kicker">White space 01</div>
-        <div class="aud-name">No gates on features</div>
-        <div class="aud-why" style="margin-top:8px"><span class="lbl">▸ The incumbent wall</span>Core workflow features locked behind higher tiers, so teams pay to unlock what they assumed was included. Clear Raven's counter: <strong>every feature, every plan.</strong></div>
-      </div>
-      <div class="aud-card">
-        <div class="aud-kicker">White space 02</div>
-        <div class="aud-name">Transparent, no per-user fees</div>
-        <div class="aud-why" style="margin-top:8px"><span class="lbl">▸ The incumbent wall</span>Per-seat pricing punishes the exact behavior maintenance software should encourage, more technicians in the system. Clear Raven's counter: <strong>predictable pricing that doesn't tax adoption.</strong></div>
-      </div>
-      <div class="aud-card">
-        <div class="aud-kicker">White space 03</div>
-        <div class="aud-name">Try the real product</div>
-        <div class="aud-why" style="margin-top:8px"><span class="lbl">▸ The incumbent wall</span>A sales-gated, guided-demo funnel keeps the operator from touching the tool before a call. Clear Raven's counter: <strong>the actual product, not a scripted walkthrough.</strong></div>
-      </div>
-      <div class="aud-card">
-        <div class="aud-kicker">White space 04</div>
-        <div class="aud-name">Built for multi-site scale</div>
-        <div class="aud-why" style="margin-top:8px"><span class="lbl">▸ The incumbent wall</span>The multi-site and asset-count paywall is where growing teams hit the ceiling on a thin or free tier. Clear Raven's counter: <strong>scale without the escalation.</strong></div>
-      </div>
+  <!-- THESIS -->
+  <section class="sec" id="thesis">
+    <div class="sec-num">00 / The thesis</div>
+    <h2 class="sec-title">The opportunity isn't a <span class="terra">feature.</span><br>It's a <em>position.</em></h2>
+    <p class="sec-intro">Clear Raven cannot out-spend MaintainX, out-logo Limble, or out-integrate Fiix. It does not need to. The entire category is shouting the same three claims, and the two things Clear Raven is actually built to do, ship a better workflow and refuse to gate features, are precisely the things almost no competitor is saying. The move is to stop competing on the crowded message and own the open one.</p>
+    <div class="uvp">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M 100 0 Q 80 20, 65 35 T 45 55 Q 30 70, 25 90" stroke="#D4FF3D" stroke-width="1.2" fill="none"/>
+        <circle cx="65" cy="35" r="3" fill="#D4FF3D"/><circle cx="45" cy="55" r="2.5" fill="#7BAA3E"/><circle cx="25" cy="90" r="3" fill="#0099D1"/>
+      </svg>
+      <div class="uvp-label">/// the ownable position</div>
+      <div class="uvp-statement">The asset platform with <span class="em">no feature gates</span><br>and a workflow techs <span class="blue">actually use.</span><br>The whole product. <span class="em">Not the upgrade path.</span></div>
     </div>
   </section>
 
-  <!-- COMPETITOR TEARDOWN -->
-  <section class="sec">
-    <div class="sec-num">02 / The incumbents</div>
-    <h2 class="sec-title">Who Clear Raven is <span class="blue">taking share from.</span></h2>
-    <p class="sec-intro" style="margin-bottom:0">The conquest layer targets the buyer actively leaving one of these. The friction column is the positioning pattern each is known for, the switcher trigger is the moment that pattern becomes a reason to leave. Named specifics and pricing live in the <a class="kb" href="https://docs.google.com/document/d/1Zwh8ZWE2z-AKu_Rf6AMtrBN5sZHxIebals4esfk6xOA/edit" target="_blank" rel="noopener">full competitor intel doc</a>.</p>
-    <table class="sig-table">
-      <tr><th>Incumbent</th><th>Where the operator hits friction</th><th>Clear Raven's counter</th><th>Switcher trigger</th></tr>
-      <tr><td class="sig">UpKeep</td><td>Tiered feature gating and per-user pricing as teams grow</td><td>Every feature on every plan, priced without per-seat penalties</td><td>"upkeep alternative" searched; renewal or seat-count increase</td></tr>
-      <tr><td class="sig">MaintainX</td><td>Higher tiers required to unlock reporting and advanced workflow</td><td>Full workflow and reporting out of the box</td><td>"maintainx alternative"; hitting a paywalled feature mid-rollout</td></tr>
-      <tr><td class="sig">Fiix</td><td>Enterprise-weight setup and cost for mid-market teams</td><td>Faster to stand up, no enterprise overhead to get value</td><td>"fiix alternative"; stalled implementation or over-scoped contract</td></tr>
-      <tr><td class="sig">Limble</td><td>Ease is the pitch, but scale and multi-site can escalate cost</td><td>Scales across sites without the tier-jump surprise</td><td>"limble alternative"; second site or asset-count ceiling reached</td></tr>
+  <!-- 01 PROFILES -->
+  <section class="sec" id="profiles">
+    <div class="sec-num">01 / The field</div>
+    <h2 class="sec-title">Ten competitors, <em>three tiers.</em></h2>
+    <p class="sec-intro">Grouped by how directly they collide with Clear Raven. Tier 1 is the SMB and mid-market fight: the four Clear Raven named, plus Coast and Tractian. Tier 2 leans industrial and regulated. Tier 3 maps the enterprise ceiling. The one card worth reading twice is Tractian, the single competitor already running Clear Raven's intended play.</p>
+    <div class="comp-grid">
+
+      <div class="comp-card t1">
+        <div class="comp-tier">Tier 1 · direct · named</div>
+        <div class="comp-name">MaintainX</div>
+        <div class="comp-url">getmaintainx.com</div>
+        <div class="comp-pos">"Slack for maintenance teams." Mobile, chat-first, built phone-up.</div>
+        <div class="comp-row"><span class="k">Scale</span><span class="v">Founded 2018. 13,000+ customers, 50M+ work orders, $150M Series D.</span></div>
+        <div class="comp-row"><span class="k">Pricing</span><span class="v">Free (crippled: ~2 repeating WOs) + ~$16/user. PM &amp; request portal gated up.</span></div>
+        <div class="comp-row"><span class="k">Proof</span><span class="v">Strongest in set. 1,400+ G2 reviews at 4.8. SOC 2 / ISO.</span></div>
+        <div class="comp-take"><span class="lbl">▸ Strategic take</span>The volume leader, impossible to out-spend, but its free tier is deliberately crippled and PM scheduling sits behind Premium. That gating is exactly the contrast Clear Raven exploits.</div>
+      </div>
+
+      <div class="comp-card t1b">
+        <div class="comp-tier">Tier 1 · the best foil</div>
+        <div class="comp-name">UpKeep</div>
+        <div class="comp-url">upkeep.com</div>
+        <div class="comp-pos">Mobile-first, now an "asset operations" platform with Nova AI.</div>
+        <div class="comp-row"><span class="k">Scale</span><span class="v">Founded 2014 (built in a garage). $36M Series B. 4,000+ companies.</span></div>
+        <div class="comp-row"><span class="k">Pricing</span><span class="v">No real free tier. $20 / $45 / $75 user. PM, offline, analytics, automation all gated up.</span></div>
+        <div class="comp-row"><span class="k">Proof</span><span class="v">G2 4.5, 1,000+ reviews, active community.</span></div>
+        <div class="comp-take"><span class="lbl">▸ Strategic take</span>The single best foil. UpKeep's own users complain Essential does "reactive maintenance only" and that offline / analytics / automation are paywalled. Every complaint is a Clear Raven headline.</div>
+      </div>
+
+      <div class="comp-card t1">
+        <div class="comp-tier">Tier 1 · direct · named</div>
+        <div class="comp-name">Fiix</div>
+        <div class="comp-url">fiixsoftware.com</div>
+        <div class="comp-pos">Industrial CMMS, AI analytics, deep Rockwell / OT integration.</div>
+        <div class="comp-row"><span class="k">Scale</span><span class="v">Founded 2008 Toronto. Acquired by Rockwell Automation. 3,000+ orgs.</span></div>
+        <div class="comp-row"><span class="k">Pricing</span><span class="v">Small free tier; paid is custom-quote only (ROI-calculator gated).</span></div>
+        <div class="comp-row"><span class="k">Proof</span><span class="v">G2 4.6, 470+ reviews, quantified manufacturing case studies.</span></div>
+        <div class="comp-take"><span class="lbl">▸ Strategic take</span>Wins on industrial depth and Rockwell gravity, not SMB simplicity or price clarity. Don't fight Fiix on the plant floor; win the smaller, faster buyer its custom-quote motion underserves.</div>
+      </div>
+
+      <div class="comp-card t1b">
+        <div class="comp-tier">Tier 1 · the closest twin</div>
+        <div class="comp-name">Limble</div>
+        <div class="comp-url">limble.com</div>
+        <div class="comp-pos">The ease-of-use leader. Same surface claim Clear Raven makes.</div>
+        <div class="comp-row"><span class="k">Scale</span><span class="v">50,000+ pros. Nike, Sony, General Mills, Mitsubishi. Tops G2/Capterra for UX.</span></div>
+        <div class="comp-row"><span class="k">Pricing</span><span class="v">~$28 / ~$69 user (calculator). SSO, multi-site, API gated to Premium+.</span></div>
+        <div class="comp-row"><span class="k">Proof</span><span class="v">Very strong. Marquee logos, deepest review density. Hardest wall to match.</span></div>
+        <div class="comp-take"><span class="lbl">▸ Strategic take</span>The one to differentiate against, because "easy to use" is nearly identical. Don't out-claim Limble on UX. Out-position it: demonstrated UX + no gating (Limble gates SSO, multi-site, API).</div>
+      </div>
+
+      <div class="comp-card t1">
+        <div class="comp-tier">Tier 1 · expanded · value rival</div>
+        <div class="comp-name">Coast</div>
+        <div class="comp-url">coastapp.com</div>
+        <div class="comp-pos">The "middle ground": start simple, layer in structure over time.</div>
+        <div class="comp-row"><span class="k">Scale</span><span class="v">Modern mobile-first; best-value pick for teams under ~15 users.</span></div>
+        <div class="comp-row"><span class="k">Pricing</span><span class="v">Competitive low entry; positions on price + speed.</span></div>
+        <div class="comp-row"><span class="k">Proof</span><span class="v">Moderate. G2 ranks for fast implementation; lighter logo density.</span></div>
+        <div class="comp-take"><span class="lbl">▸ Strategic take</span>Chasing the same value switcher. Competes on price and speed, not a distinct position. "No gating + UX" is more defensible than "cheaper and faster," which any entrant can claim.</div>
+      </div>
+
+      <div class="comp-card t1b">
+        <div class="comp-tier">Tier 1 · ⚠ already running the play</div>
+        <div class="comp-name">Tractian</div>
+        <div class="comp-url">tractian.com</div>
+        <div class="comp-pos">AI predictive + sensors. And: "No paywalls. Full functionality, day one."</div>
+        <div class="comp-row"><span class="k">Scale</span><span class="v">Fast-growing, well-funded, aggressive content/SEO engine.</span></div>
+        <div class="comp-row"><span class="k">Pricing</span><span class="v">Markets "everything included." Sensor hardware bundled.</span></div>
+        <div class="comp-row"><span class="k">Proof</span><span class="v">Strong, rising. Most marketing-sophisticated challenger in the set.</span></div>
+        <div class="comp-take"><span class="lbl">▸ Most important card</span>Tractian already markets no-gating, the play Clear Raven intends to own. The opening: they wrap it in expensive sensor hardware. Clear Raven can own "no gating + best UX" for the software-only buyer. The window is open now, not forever.</div>
+      </div>
+
+      <div class="comp-card t2">
+        <div class="comp-tier">Tier 2 · industrial / regulated</div>
+        <div class="comp-name">eMaint</div>
+        <div class="comp-url">emaint.com · a Fluke company</div>
+        <div class="comp-pos">Customizable, compliance-grade, native Fluke sensor integration.</div>
+        <div class="comp-row"><span class="k">Scale</span><span class="v">40+ year heritage, owned by Fluke (Fortive).</span></div>
+        <div class="comp-row"><span class="k">Pricing</span><span class="v">$33 (3-user cap) / $85 user. À la carte. Request portal = Enterprise-only.</span></div>
+        <div class="comp-row"><span class="k">Proof</span><span class="v">G2 4.5, 260+ reviews, 40-year track record.</span></div>
+        <div class="comp-take"><span class="lbl">▸ Strategic take</span>Legacy, hardware-anchored, dated UX. Not a direct SMB fight, but its aggressive gating (portal locked to Enterprise) is another proof point that the category gates relentlessly.</div>
+      </div>
+
+      <div class="comp-card t2">
+        <div class="comp-tier">Tier 2 · industrial / multi-site</div>
+        <div class="comp-name">Maintenance Connection</div>
+        <div class="comp-url">accruent.com</div>
+        <div class="comp-pos">Robust full-lifecycle CMMS/EAM with multi-site depth.</div>
+        <div class="comp-row"><span class="k">Scale</span><span class="v">Established, owned by Accruent (Fortive). Healthcare, mfg, facilities.</span></div>
+        <div class="comp-row"><span class="k">Pricing</span><span class="v">Named-user; subscription or perpetual license. Custom-quote, sales-led.</span></div>
+        <div class="comp-row"><span class="k">Proof</span><span class="v">Solid enterprise case studies under the Fortive umbrella.</span></div>
+        <div class="comp-take"><span class="lbl">▸ Strategic take</span>Enterprise EAM-leaning; collides with Clear Raven only at the top of its range. The ceiling marker: this is what "heavy and gated" looks like, the opposite of the wedge.</div>
+      </div>
+
+      <div class="comp-card t3">
+        <div class="comp-tier">Tier 3 · public sector / campus</div>
+        <div class="comp-name">Brightly</div>
+        <div class="comp-url">brightlysoftware.com · Siemens</div>
+        <div class="comp-pos">GIS + capital planning + ESG for campuses, cities, utilities.</div>
+        <div class="comp-row"><span class="k">Scale</span><span class="v">Formerly Dude Solutions; now a Siemens company.</span></div>
+        <div class="comp-row"><span class="k">Pricing</span><span class="v">Four custom-quoted editions, no transparency. À la carte "sprawls quickly."</span></div>
+        <div class="comp-row"><span class="k">Proof</span><span class="v">Strong in its public-sector niche.</span></div>
+        <div class="comp-take"><span class="lbl">▸ Strategic take</span>A vertical specialist, not a head-to-head rival. Its opaque, sprawling pricing reinforces the white space: the category does not do transparent, all-in pricing.</div>
+      </div>
+
+      <div class="comp-card t3">
+        <div class="comp-tier">Tier 3 · enterprise EAM ceiling</div>
+        <div class="comp-name">IBM Maximo</div>
+        <div class="comp-url">ibm.com/maximo</div>
+        <div class="comp-pos">Deep enterprise asset lifecycle, Watson predictive, IoT.</div>
+        <div class="comp-row"><span class="k">Scale</span><span class="v">One of the most established enterprise EAM platforms globally.</span></div>
+        <div class="comp-row"><span class="k">Pricing</span><span class="v">Enterprise, custom, expensive. Long, IT-heavy implementation.</span></div>
+        <div class="comp-row"><span class="k">Proof</span><span class="v">Very strong at enterprise; weak SMB relevance.</span></div>
+        <div class="comp-take"><span class="lbl">▸ Strategic take</span>The ceiling and the cautionary tale. Powerful, complex, expensive, gated, hard to use. It defines the far end of the axis Clear Raven should own the opposite of.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 02 MATRIX -->
+  <section class="sec" id="matrix">
+    <div class="sec-num">02 / At a glance</div>
+    <h2 class="sec-title">The six-way <span class="blue">direct fight.</span></h2>
+    <p class="sec-intro">The SMB and mid-market players, side by side. Read the gating row last and let it land: five of six gate meaningful features. Only Tractian markets no-gating, and it does so wrapped in expensive sensor hardware.</p>
+    <div class="matrix-wrap">
+      <table class="matrix">
+        <tr><th>Dimension</th><th>MaintainX</th><th>UpKeep</th><th>Fiix</th><th>Limble</th><th>Coast</th><th>Tractian</th></tr>
+        <tr><td>Core position</td><td>Mobile, chat-first</td><td>Mobile, asset-ops</td><td>Industrial + Rockwell</td><td>Ease-of-use leader</td><td>Best value, small teams</td><td>AI predictive + sensors</td></tr>
+        <tr><td>Primary audience</td><td>SMB/mid FM &amp; mfg</td><td>SMB maint. teams</td><td>Mid/large mfg</td><td>3–30 tech teams</td><td>Under ~15 users</td><td>Predictive mfg</td></tr>
+        <tr><td>Pricing</td><td>Free + ~$16+/user</td><td>~$20–75/user, no free</td><td>Custom quote + free tier</td><td>~$28–69/user</td><td>Low entry</td><td>Bundled w/ hardware</td></tr>
+        <tr><td>Key differentiator</td><td>Adoption + free door</td><td>Mobile + requesters</td><td>Rockwell/OT + AI</td><td>UX + fast setup</td><td>Price + speed</td><td>Sensors + no-gating</td></tr>
+        <tr><td>Proof strength</td><td>Strong (1,400+ G2)</td><td>Strong (1,000+ G2)</td><td>Strong (470+ G2)</td><td>Very strong (50k)</td><td>Moderate</td><td>Strong, rising</td></tr>
+        <tr><td>Feature gating</td><td class="gate-yes">Yes — PM/portal</td><td class="gate-yes">Heavy</td><td class="gate-yes">Quote-gated</td><td class="gate-yes">Yes — SSO/API</td><td class="gate-yes">Lighter</td><td class="gate-none">Markets NONE</td></tr>
+        <tr><td>Entanglement</td><td>Med</td><td>Med</td><td>High (Rockwell)</td><td>Med</td><td>Low</td><td>High (hardware)</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- 03 SATURATION -->
+  <section class="sec" id="saturation">
+    <div class="sec-num">03 / The crowded ground</div>
+    <h2 class="sec-title">What <span class="terra">everyone</span> is saying.</h2>
+    <p class="sec-intro">These themes appear across nearly every competitor. They are table stakes now: necessary to be credible, useless to differentiate. Clear Raven's instinct to lead with "better UI/UX" walks straight into the most crowded corner, where Limble has a 50,000-customer head start on the identical claim.</p>
+    <table class="sat-table">
+      <tr><th>Saturated theme</th><th>Who says it</th><th>Example language</th><th>Saturation</th></tr>
+      <tr><td class="theme">"Easy to use / intuitive"</td><td>MaintainX, UpKeep, Fiix, Limble, Coast, eMaint</td><td>"Award-winning ease of use," "learn it in a day"</td><td><span class="sat-pill">Extreme</span></td></tr>
+      <tr><td class="theme">"Mobile-first / for technicians"</td><td>MaintainX, UpKeep, Coast, Tractian, Limble</td><td>"Built for technicians, not software buyers"</td><td><span class="sat-pill">Extreme</span></td></tr>
+      <tr><td class="theme">"Reduce downtime"</td><td>All ten</td><td>"Minimize downtime," "extend asset life"</td><td><span class="sat-pill">Extreme</span></td></tr>
+      <tr><td class="theme">"Fast setup / quick ROI"</td><td>Limble, Coast, MaintainX, Tractian</td><td>"Up and running in minutes," "ROI in weeks"</td><td><span class="sat-pill">High</span></td></tr>
+      <tr><td class="theme">"Get off spreadsheets"</td><td>MaintainX, UpKeep, Coast, Fiix</td><td>"Replace paper logs and disconnected tools"</td><td><span class="sat-pill">High</span></td></tr>
+      <tr><td class="theme">"AI insights / predictive"</td><td>Fiix, UpKeep, Tractian, MaintainX, Maximo</td><td>"AI copilot," "predict failures"</td><td><span class="sat-pill">Rising fast</span></td></tr>
+      <tr><td class="theme">"Prove ROI / dashboards"</td><td>All ten</td><td>"Track MTTR/MTBF," "executive dashboards"</td><td><span class="sat-pill">High</span></td></tr>
     </table>
-    <p class="bench-src">Friction patterns reflect Impactable's competitor intelligence for Clear Raven and the category positioning in the intel doc. Exact tier names and prices shift, confirm against each vendor's current pricing before use in ad copy. Source: <a href="https://docs.google.com/document/d/1Zwh8ZWE2z-AKu_Rf6AMtrBN5sZHxIebals4esfk6xOA/edit" target="_blank" rel="noopener">Clear Raven competitor intel doc</a>.</p>
   </section>
 
-  <!-- WHAT IT MEANS -->
+  <!-- 04 WHITE SPACE -->
+  <section class="sec" id="whitespace">
+    <div class="sec-num">04 / The open ground</div>
+    <h2 class="sec-title">What <em>nobody</em> is saying.</h2>
+    <p class="sec-intro">The gaps in the competitive conversation, scored by opportunity size. This is the most important section in the report. Three of these five are HIGH, and two of the three connect directly to Clear Raven's stated differentiators.</p>
+    <div class="ws-grid">
+
+      <div class="ws-card">
+        <div class="ws-head">
+          <span class="ws-no">White space 01</span>
+          <span class="ws-name">No feature gating, as a <span class="em">stated position</span></span>
+          <span class="ws-size">High</span>
+        </div>
+        <div class="ws-line"><span class="k">The gap</span><span class="v">Of ten competitors, only Tractian openly markets "no paywalls, every feature for every customer." The other nine gate aggressively.</span></div>
+        <div class="ws-line"><span class="k">Why it matters</span><span class="v">Gating is the #1 recurring complaint across UpKeep, MaintainX, Limble, and eMaint reviews. Buyers feel nickel-and-dimed.</span></div>
+        <div class="ws-line"><span class="k">Evidence</span><span class="v">UpKeep Essential is "reactive only." MaintainX free = ~2 repeating WOs. Limble gates SSO/multi-site/API. eMaint locks the request portal to Enterprise.</span></div>
+        <div class="ws-line"><span class="k">Verdict</span><span class="v" style="color:var(--canopy)">Clear Raven's single strongest, most defensible position. Only real contest is Tractian, who muddies it with hardware.</span></div>
+      </div>
+
+      <div class="ws-card">
+        <div class="ws-head">
+          <span class="ws-no">White space 02</span>
+          <span class="ws-name">Transparent, <span class="em">all-in pricing</span></span>
+          <span class="ws-size">High</span>
+        </div>
+        <div class="ws-line"><span class="k">The gap</span><span class="v">The category hides price behind demos and calculators. Fiix, Maintenance Connection, Brightly, Maximo publish no real number; Limble redirects to a calculator.</span></div>
+        <div class="ws-line"><span class="k">Why it matters</span><span class="v">Buyers resent having to "request a demo just to see a number." Opacity is friction at the exact moment a switcher is most motivated.</span></div>
+        <div class="ws-line"><span class="k">Evidence</span><span class="v">Independent pricing guides exist solely because "CMMS vendors hide the real price." The market is begging for one honest, published number.</span></div>
+        <div class="ws-line"><span class="k">Verdict</span><span class="v" style="color:var(--canopy)">A marketing weapon, SEO asset, and trust signal in one. A natural extension of the no-gating model.</span></div>
+      </div>
+
+      <div class="ws-card">
+        <div class="ws-head">
+          <span class="ws-no">White space 03</span>
+          <span class="ws-name">Demonstrated UX, <span class="em">not claimed</span></span>
+          <span class="ws-size">Med-High</span>
+        </div>
+        <div class="ws-line"><span class="k">The gap</span><span class="v">Everyone claims "easy to use." Almost no one shows it before the demo. The category sells UX in words, then hides the product behind a sales call.</span></div>
+        <div class="ws-line"><span class="k">Why it matters</span><span class="v">UX is the one differentiator a claim can't settle; it has to be felt. A buyer who experiences a better workflow before sales is pre-sold.</span></div>
+        <div class="ws-line"><span class="k">Evidence</span><span class="v">Adoption is the category's core anxiety: "if technicians avoid the system, the data is worthless." Yet competitors prove UX with testimonials, not experience.</span></div>
+        <div class="ws-line"><span class="k">Verdict</span><span class="v" style="color:var(--canopy)">The claim is saturated; the demonstration is wide open. This is how Clear Raven escapes the Limble sameness trap.</span></div>
+      </div>
+
+      <div class="ws-card">
+        <div class="ws-head">
+          <span class="ws-no">White space 04</span>
+          <span class="ws-name">The <span class="em">switcher / escape</span> narrative</span>
+          <span class="ws-size">High</span>
+        </div>
+        <div class="ws-line"><span class="k">The gap</span><span class="v">Competitors talk to spreadsheet-to-software first-timers. Few speak to the buyer trying to ESCAPE a gated, clunky, or over-complex incumbent.</span></div>
+        <div class="ws-line"><span class="k">Why it matters</span><span class="v">The switcher is the highest-intent, lowest-cost buyer. Already searching, already motivated, frustrations map 1:1 onto Clear Raven's differentiators.</span></div>
+        <div class="ws-line"><span class="k">Evidence</span><span class="v">An entire cottage industry of "UpKeep alternatives" / "MaintainX alternatives" content exists because buyers actively shop for replacements.</span></div>
+        <div class="ws-line"><span class="k">Verdict</span><span class="v" style="color:var(--canopy)">High for paid capture. Comparison and "alternative to" terms convert better and cost less than broad category terms.</span></div>
+      </div>
+
+      <div class="ws-card">
+        <div class="ws-head">
+          <span class="ws-no">White space 05</span>
+          <span class="ws-name">A clear <span class="em">point of view</span> (a founder voice)</span>
+          <span class="ws-size">Med · compounds</span>
+        </div>
+        <div class="ws-line"><span class="k">The gap</span><span class="v">No competitor has a strong, opinionated founder voice building category demand. It's all corporate feature-marketing.</span></div>
+        <div class="ws-line"><span class="k">Why it matters</span><span class="v">A company that can't outspend MaintainX can still out-teach them. A point of view compounds and feeds every paid channel.</span></div>
+        <div class="ws-line"><span class="k">Verdict</span><span class="v" style="color:var(--canopy)">Slow to start, but it becomes a durable moat the incumbents structurally cannot copy.</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 05 POSITION -->
+  <section class="sec" id="position">
+    <div class="sec-num">05 / The position</div>
+    <h2 class="sec-title">Built from the <em>white space.</em></h2>
+    <p class="sec-intro">Not from the current homepage, which leads with the saturated "smart asset management" claim. The direction below moves the lead onto open ground: the two ownable differentiators, not the ten shared ones.</p>
+    <div class="sub-title plain">Dial <span class="terra">back</span> · Lean <em>in</em></div>
+    <div class="hooks-grid">
+      <div class="hook-col engaged">
+        <div class="hook-stage">Dial back — saturated</div>
+        <div class="hook-sub">These put Clear Raven in an unwinnable sameness contest</div>
+        <div class="hook">"Smart asset management software" as the lead. Ten competitors use it.</div>
+        <div class="hook">"Easy to use" as a claim. Limble owns it with 50,000 customers.</div>
+        <div class="hook">"Operational intelligence" asserted without a concrete, visible proof.</div>
+      </div>
+      <div class="hook-col aware">
+        <div class="hook-stage">Lean in — ownable</div>
+        <div class="hook-sub">Structurally true, rare, and provable</div>
+        <div class="hook">No feature gating. Every capability, every plan. Provable.</div>
+        <div class="hook">A better workflow, made visible through product-led proof, not copy.</div>
+        <div class="hook">Transparent, all-in pricing, in a market that hides its prices.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 PAINS -->
   <section class="sec">
-    <div class="sec-num">03 / What it means</div>
-    <h2 class="sec-title">The intel <em>sets the target.</em> The worksheet <span class="blue">names it.</span></h2>
-    <p class="sec-intro">The white space is the message; the switcher accounts are the audience. The audience worksheet operationalizes this intel: the Clay-scored switcher list is built from the technographic signal that an account already runs an incumbent, and the Google conquest layer catches "[competitor] alternative" the moment it is typed.</p>
+    <div class="sec-num">06 / Uniquely solvable</div>
+    <h2 class="sec-title">The pains Clear Raven is <em>built</em> for.</h2>
+    <p class="sec-intro">Each maps to a white space, and each is something competitors are structurally unable or unwilling to solve.</p>
+    <table class="pain-table">
+      <tr><th>Buyer pain</th><th>Why competitors don't solve it</th><th>Clear Raven's angle</th></tr>
+      <tr><td class="quote">"I'm paying for a plan but the feature I need is locked one tier up."</td><td>Gating is their monetization model; they're incented to keep it.</td><td class="win">No gating. The price you pay is the whole product.</td></tr>
+      <tr><td class="quote">"I can't even see a price without booking a demo."</td><td>Opacity protects sales-led, custom-quote motions.</td><td class="win">Published, all-in pricing. No demo to evaluate.</td></tr>
+      <tr><td class="quote">"We bought ease-of-use and our techs still won't use it."</td><td>They claim UX in copy, then hide the product behind a call.</td><td class="win">Experience the workflow before you talk to anyone.</td></tr>
+      <tr><td class="quote">"Switching feels risky and expensive."</td><td>Incumbents create lock-in; few address the switcher's fear.</td><td class="win">Built for the escape: simple migration, full features day one.</td></tr>
+      <tr><td class="quote">"Enterprise tools are overkill; cheap ones are too thin."</td><td>Maximo/Brightly are heavy; budget tools gate the basics.</td><td class="win">Full capability, accessible price, no enterprise weight.</td></tr>
+    </table>
+  </section>
+
+  <!-- 07 TARGETING -->
+  <section class="sec" id="targeting">
+    <div class="sec-num">07 / Where to aim</div>
+    <h2 class="sec-title">Target the <em>switcher</em> first.</h2>
+    <p class="sec-intro">The highest-intent, lowest-cost buyer in the market is already shopping for a way out of a gated incumbent. That is where the UVP and the pains align hardest, and it is exactly what the <a class="kb" onclick="showView('worksheet')" style="cursor:pointer">audience worksheet</a> operationalizes.</p>
+    <div class="target-grid">
+      <div class="tcol">
+        <div class="tcol-h">Primary</div>
+        <ul>
+          <li>The switcher: maintenance &amp; ops managers on UpKeep, MaintainX, Fiix, or legacy tools, frustrated by gating, price creep, or clunky UX.</li>
+          <li>SMB to lower-mid-market teams (~20–500 employees) in manufacturing, facilities, property/FM, light industrial.</li>
+          <li>Economic buyer: Maintenance Manager, Ops Manager, Facilities Director. End user who makes adoption: the frontline technician.</li>
+        </ul>
+      </div>
+      <div class="tcol sec2">
+        <div class="tcol-h">Secondary</div>
+        <ul>
+          <li>Spreadsheet-to-software first-timers. Good fit, but lower differentiation and a longer education cycle than the switcher.</li>
+          <li>Multi-site SMBs who outgrew a single-site free tool and are hitting the incumbents' multi-site paywalls.</li>
+        </ul>
+      </div>
+      <div class="tcol low">
+        <div class="tcol-h">De-prioritize</div>
+        <ul>
+          <li>Large regulated enterprises needing deep compliance, calibration, or OT integration. Maximo, eMaint, Fiix are stronger.</li>
+          <li>Public-sector / large-campus GIS &amp; capital-planning buyers. Brightly owns this vertical.</li>
+          <li>Buyers who specifically want bundled predictive-maintenance hardware. That's Tractian's lane.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 HOOKS -->
+  <section class="sec">
+    <div class="sec-num">08 / Campaign language</div>
+    <h2 class="sec-title">Message <em>hooks</em> by stage.</h2>
+    <p class="sec-intro">Campaign-ready phrasing mapped to the white space. The seed library for ads, landing pages, and founder content.</p>
+    <div class="hooks-grid">
+      <div class="hook-col">
+        <div class="hook-stage">Unaware</div>
+        <div class="hook-sub">Reframe the problem</div>
+        <div class="hook">"Your CMMS bill goes up every time you need it to do more."</div>
+        <div class="hook">"You didn't buy maintenance software. You bought the starter tier of it."</div>
+        <div class="hook">"If your techs won't open the app, the data was never the problem."</div>
+      </div>
+      <div class="hook-col aware">
+        <div class="hook-stage">Aware</div>
+        <div class="hook-sub">Differentiate the approach</div>
+        <div class="hook">"Every feature. Every plan. No upgrade path."</div>
+        <div class="hook">"See the price. See the product. Before you talk to sales."</div>
+        <div class="hook">"The whole platform on day one, not the parts they let you have."</div>
+      </div>
+      <div class="hook-col engaged">
+        <div class="hook-stage">Engaged</div>
+        <div class="hook-sub">Remove the risk</div>
+        <div class="hook">"Switching from [incumbent]? Bring your assets, keep every feature, pay one honest price."</div>
+        <div class="hook">"What your current tool charges extra for, we include."</div>
+        <div class="hook">"Try the actual workflow, not a guided demo."</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 TAKEAWAYS -->
+  <section class="sec" id="takeaways">
+    <div class="sec-num">09 / The bottom line</div>
+    <h2 class="sec-title">Nine things to <em>act on.</em></h2>
+    <div class="take-list">
+      <div class="take"><div class="take-n">01</div><div class="take-body">The category is <strong>messaging-saturated to the point of noise.</strong> "Easy to use," "mobile-first," and "reduce downtime" are said by everyone and now mean nothing. Leading with them is a losing game.</div></div>
+      <div class="take hot"><div class="take-n">02</div><div class="take-body"><strong>No feature gating is Clear Raven's single best, most defensible position.</strong> Nine of ten competitors gate, and their users complain publicly. It belongs as the spine of the brand, not a footnote.</div></div>
+      <div class="take warn"><div class="take-n">03</div><div class="take-body"><strong>Tractian is the one competitor already running this play.</strong> They wrap no-gating in expensive sensor hardware. Clear Raven can own "no gating + best workflow UX" for the software-only buyer, but the window is open now, not indefinitely.</div></div>
+      <div class="take"><div class="take-n">04</div><div class="take-body"><strong>"Better UX" must be shown, not claimed.</strong> Limble owns the claim with 50,000 customers. Clear Raven out-positions by demonstrating the workflow before the demo, where the category is wide open.</div></div>
+      <div class="take"><div class="take-n">05</div><div class="take-body"><strong>The switcher is the highest-ROI buyer.</strong> Competitor-comparison and "alternative to" search demand already exists and is unclaimed by the incumbents. It converts better and costs less than broad category terms.</div></div>
+      <div class="take"><div class="take-n">06</div><div class="take-body"><strong>Pricing transparency is a free weapon.</strong> The no-gating model makes an honest, published, all-in price possible in a market that hides pricing. Trust signal, SEO asset, and differentiator at once.</div></div>
+      <div class="take warn"><div class="take-n">07</div><div class="take-body"><strong>Most vulnerable competitor to attack: UpKeep.</strong> Its own users name gating and per-user price creep as top complaints. Every one of those complaints is a Clear Raven headline.</div></div>
+      <div class="take hot"><div class="take-n">08</div><div class="take-body"><strong>The single most important move:</strong> reposition the lead from "smart asset management" to "the no-gates CMMS with the workflow techs actually use." Then build a switcher capture motion and a founder voice on top of it.</div></div>
+      <div class="take"><div class="take-n">09</div><div class="take-body"><strong>The sequence matters:</strong> position, then prove, then capture, then create. Skip straight to ad spend without the position and proof and the budget burns.</div></div>
+    </div>
+
     <div class="next">
-      <div class="next-label">/// from intel to audience</div>
-      <div class="next-h">See how the thesis becomes a <em>build.</em></div>
-      <p class="next-body">The audience worksheet turns these four lanes into personas, signal overlays, and a keyword architecture. The Roadmap turns them into a launch.</p>
+      <div class="next-label">/// from the map to the motion</div>
+      <div class="next-h">The intel names the position. Now <em>reach it.</em></div>
+      <p class="next-body">This analysis names where to stand. The audience worksheet translates these five white spaces and the switcher thesis into concrete LinkedIn audiences, search keyword themes, and signal-data targets, so the team knows exactly who to reach and how. The Roadmap turns that into a launch. Create. Connect. Capture.</p>
       <div class="hero-cta" style="margin-top:0">
         <button class="btn btn-primary" onclick="showView('worksheet')">Open the audience worksheet →</button>
         <button class="btn btn-blue" onclick="showView('roadmap')">View the roadmap →</button>
@@ -516,7 +942,7 @@ a{color:inherit}
   </section>
 
   <footer class="foot">
-    <div class="foot-line">Impactable · LinkedIn Marketing Partner · Competitor Intel · Clear Raven · June 2026 · impactable.com</div>
+    <div class="foot-line">Prepared by Impactable · Competitive White Space · Clear Raven · June 2026 · impactable.com</div>
   </footer>
 
 </div>
@@ -855,7 +1281,7 @@ a{color:inherit}
       </svg>
       <div class="strat-kick">/// the launch strategy</div>
       <div class="strat-h">Everything in this room, <em>built into a launch plan.</em></div>
-      <p class="strat-sub">Not a template. The strategy takes the switcher thesis, the four white-space lanes, and the audience plan and builds Clear Raven's <strong>launch-ready roadmap</strong>, the message and offer architecture per persona, and the channel and budget direction, yours to run in-house or hand to us.</p>
+      <p class="strat-sub">Not a template. The strategy takes the switcher thesis, the five white-space lanes, and the audience plan and builds Clear Raven's <strong>launch-ready roadmap</strong>, the message and offer architecture per persona, and the channel and budget direction, yours to run in-house or hand to us.</p>
       <div class="strat-body">
         <div>
           <div class="strat-incl-label">/// what the strategy includes</div>
@@ -934,7 +1360,7 @@ a{color:inherit}
       <a class="res-card" href="https://docs.google.com/document/d/1Zwh8ZWE2z-AKu_Rf6AMtrBN5sZHxIebals4esfk6xOA/edit" target="_blank" rel="noopener">
         <div class="res-kicker">Document · delivered</div>
         <div class="res-h">Competitor Intel Doc</div>
-        <div class="res-d">The switcher thesis and the four white-space lanes, with the incumbent teardown behind the conquest layer.</div>
+        <div class="res-d">The switcher thesis and the five white-space lanes, with the incumbent teardown behind the conquest layer.</div>
         <span class="res-link">Open the competitor intel doc ↗</span>
       </a>
       <a class="res-card" href="https://docs.google.com/document/d/1QFexURtt92Ot1tXaqCcLmjiGwFeTDUOiNCi40VfiHA8/edit" target="_blank" rel="noopener">
