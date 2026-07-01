@@ -320,11 +320,10 @@ a{color:inherit}
     <span class="nav-logo" onclick="showView('overview')"><span class="imp">IMPACT</span><span class="able">ABLE</span><span class="sep">///</span><span class="doc">Clear Raven · Intelligence Room</span></span>
     <div class="nav-tabs">
       <button class="ntab active" data-view="overview" onclick="showView('overview')">Overview</button>
-      <button class="ntab" data-view="worksheet" onclick="showView('worksheet')">Targeting Worksheet</button>
-      <a class="ntab" href="https://impactable.marketing/linkedin-launch.html" target="_blank" rel="noopener">LinkedIn Launch <span class="ext">↗</span></a>
-      <a class="ntab" href="https://impactable.marketing/google.html" target="_blank" rel="noopener">LinkedIn + Google <span class="ext">↗</span></a>
-      <a class="ntab" href="https://landbot.online/v3/H-2201417-SPMOARYH76NAHLP2/index.html" target="_blank" rel="noopener">Book a Call <span class="ext">↗</span></a>
-      <a class="ntab-cta" href="https://impactable.marketing/intelligence-room.html" target="_blank" rel="noopener">Strategy Build →</a>
+      <button class="ntab" data-view="competitor" onclick="showView('competitor')">Competitor Intel</button>
+      <button class="ntab" data-view="worksheet" onclick="showView('worksheet')">Audience Worksheet</button>
+      <button class="ntab" data-view="roadmap" onclick="showView('roadmap')">Roadmap</button>
+      <a class="ntab-cta" href="https://landbot.online/v3/H-2201417-SPMOARYH76NAHLP2/index.html" target="_blank" rel="noopener">Book a Call →</a>
     </div>
   </div>
 </nav>
@@ -338,10 +337,11 @@ a{color:inherit}
   <section class="hero">
     <span class="tag">Private intelligence room · prepared for Clear Raven</span>
     <h1>The <span class="canopy">switcher</span><br>playbook.<br><span class="outline">Built to</span> <span class="blue">launch.</span></h1>
-    <p class="hero-sub">This room holds the diagnostics Impactable built for Clear Raven, and the path they open. The white space named the position: <strong>no gates, better workflow, aimed at the operator already shopping for a way out of a gated incumbent.</strong> Below: the audience plan that turns that thesis into a build, the channels it runs across, and the strategy engagement that makes it launch-ready.</p>
+    <p class="hero-sub">This room holds the diagnostics Impactable built for Clear Raven, and the path they open. The white space named the position: <strong>no gates, better workflow, aimed at the operator already shopping for a way out of a gated incumbent.</strong> Inside: the competitor white space that sets the thesis, the audience plan that turns it into a build, and the roadmap for launching it.</p>
     <div class="hero-cta">
-      <button class="btn btn-primary" onclick="showView('worksheet')">Open the targeting worksheet →</button>
-      <a class="btn btn-ghost" href="https://docs.google.com/document/d/1QFexURtt92Ot1tXaqCcLmjiGwFeTDUOiNCi40VfiHA8/edit" target="_blank" rel="noopener">Open the targeting doc ↗</a>
+      <button class="btn btn-primary" onclick="showView('competitor')">See the competitor intel →</button>
+      <button class="btn btn-blue" onclick="showView('worksheet')">Open the audience worksheet →</button>
+      <button class="btn btn-ghost" onclick="showView('roadmap')">View the roadmap →</button>
     </div>
     <div class="hero-meta" style="margin-top:32px">
       <span>Prepared by <strong>Impactable</strong></span>
@@ -354,119 +354,39 @@ a{color:inherit}
   <!-- WHAT'S INSIDE -->
   <section class="sec">
     <div class="sec-num">01 / What's in this room</div>
-    <h2 class="sec-title">Delivered. And <em>what it unlocks.</em></h2>
-    <p class="sec-intro">The diagnostics are already built and sitting in this room, the targeting worksheet, the shareable audience-targeting doc, and the competitor intel behind the switcher thesis. The last item is the step they were designed to earn: a customized strategy build that turns the plan into a launch-ready system.</p>
+    <h2 class="sec-title">Two diagnostics, <em>delivered.</em> One <span class="blue">roadmap</span> out.</h2>
+    <p class="sec-intro">Impactable's free Competitor Intel Report is two documents built by hand: the competitor white space, and the signal-composed audience worksheet. Both are done and sitting in this room. The Roadmap tab shows the path they open, and what it costs to launch.</p>
     <div class="room-cards">
       <div class="rc delivered">
         <div class="rc-status">Delivered</div>
-        <div class="rc-h">Interactive Targeting Worksheet</div>
-        <div class="rc-d">Who to reach and in what order, across LinkedIn native targeting, third-party signal overlays, and paid search, all sequenced by the audience efficiency ladder with published CPL benchmarks.</div>
-        <div class="rc-foot">
-          <button class="rc-link" onclick="showView('worksheet')">Open it →</button>
-        </div>
-      </div>
-      <div class="rc delivered">
-        <div class="rc-status">Delivered</div>
-        <div class="rc-h">The Audience Targeting Doc</div>
-        <div class="rc-d">The same audience plan as a branded, shareable document, built to circulate internally at Clear Raven: personas, keyword architecture, negative keywords, budget framework, and the 90-day launch order.</div>
-        <div class="rc-foot">
-          <a class="rc-link solid-b" href="https://docs.google.com/document/d/1QFexURtt92Ot1tXaqCcLmjiGwFeTDUOiNCi40VfiHA8/edit" target="_blank" rel="noopener">Open the doc ↗</a>
-        </div>
-      </div>
-      <div class="rc delivered">
-        <div class="rc-status">Delivered</div>
-        <div class="rc-h">The Competitor Intel Doc</div>
+        <div class="rc-h">Competitor Intel</div>
         <div class="rc-d">The switcher thesis, evidenced. Where UpKeep, MaintainX, Fiix, and Limble gate, meter, and price-creep, and the white space Clear Raven owns against each. The intelligence behind the conquest layer.</div>
         <div class="rc-foot">
-          <a class="rc-link solid-b" href="https://docs.google.com/document/d/1Zwh8ZWE2z-AKu_Rf6AMtrBN5sZHxIebals4esfk6xOA/edit" target="_blank" rel="noopener">Open the doc ↗</a>
+          <button class="rc-link" onclick="showView('competitor')">Open the intel →</button>
+        </div>
+      </div>
+      <div class="rc delivered">
+        <div class="rc-status">Delivered</div>
+        <div class="rc-h">Audience Worksheet</div>
+        <div class="rc-d">Who to reach and in what order, across LinkedIn native targeting, third-party signal overlays, and paid search, all sequenced by the audience efficiency ladder with published CPL benchmarks.</div>
+        <div class="rc-foot">
+          <button class="rc-link" onclick="showView('worksheet')">Open the worksheet →</button>
         </div>
       </div>
       <div class="rc next">
-        <div class="rc-status">What's next</div>
-        <div class="rc-h">The Strategy Build</div>
-        <div class="rc-d">The worksheet answers who. The Strategy Build answers what to say to each of them, what to put in front of them, and how the whole ecosystem runs, customized to Clear Raven through Impactable's strategy process.</div>
+        <div class="rc-status">Where it goes</div>
+        <div class="rc-h">The Roadmap</div>
+        <div class="rc-d">The diagnostics answer who and why. The Roadmap answers what happens next: the LinkedIn launch strategy, the channel motions it runs across, ongoing management options, and the supporting documents to circulate internally.</div>
         <div class="rc-foot">
-          <a class="rc-link" href="#strategy" onclick="document.getElementById('strategy').scrollIntoView({behavior:'smooth'});return false;">See what it includes →</a>
+          <button class="rc-link" onclick="showView('roadmap')">See the roadmap →</button>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- CHANNEL BRIDGE -->
-  <section class="sec">
-    <div class="sec-num">02 / The channels it runs across</div>
-    <h2 class="sec-title">One buyer. <span class="blue">Every</span> channel <em>they touch.</em></h2>
-    <p class="sec-intro">The targeting plan is channel-agnostic on purpose. Here is how Impactable runs it, LinkedIn as the qualification and nurture engine, Google as the demand-capture layer that catches the switcher mid-search. Explore each motion.</p>
-    <div class="chan-grid">
-      <a class="chan" href="https://impactable.marketing/linkedin-launch.html" target="_blank" rel="noopener">
-        <div class="chan-kick">Motion 01 · qualify &amp; nurture</div>
-        <div class="chan-h"><span class="blue">LinkedIn</span> launch</div>
-        <div class="chan-d">The warm-first architecture: retargeting tiers, the Clay-scored ABM switcher list, and the selective cold personas, all with Audience Expansion off and the ICP filtered tight. How the switcher gets qualified.</div>
-        <div class="chan-go">View the LinkedIn launch plan <span class="arr">→</span></div>
-      </a>
-      <a class="chan g" href="https://impactable.marketing/google.html" target="_blank" rel="noopener">
-        <div class="chan-kick">Motion 02 · capture demand</div>
-        <div class="chan-h"><span class="clay">LinkedIn + Google</span></div>
-        <div class="chan-d">The compound engine: Google conquest catches "[competitor] alternative" the moment it is typed, LinkedIn qualifies and nurtures, and the two share signals and audiences. The trifecta a LinkedIn-only shop can't run.</div>
-        <div class="chan-go">View the LinkedIn + Google motion <span class="arr">→</span></div>
-      </a>
-    </div>
-  </section>
-
-  <!-- STRATEGY BRIDGE (the push) -->
-  <section class="sec" id="strategy">
-    <div class="sec-num">03 / The recommended next step</div>
-    <h2 class="sec-title">Turn the plan into a <em>launch-ready system.</em></h2>
-    <p class="sec-intro">The diagnostics in this room prove the thesis and name the audience. The Strategy Build is where it becomes an operating plan Clear Raven can execute, customized end to end through Impactable's strategy process.</p>
-
-    <div class="strat">
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M 100 0 Q 80 20, 65 35 T 45 55 Q 30 70, 25 90" stroke="#D4FF3D" stroke-width="1.2" fill="none"/>
-        <circle cx="65" cy="35" r="3" fill="#D4FF3D"/><circle cx="45" cy="55" r="2.5" fill="#7BAA3E"/><circle cx="25" cy="90" r="3" fill="#1B9BD1"/>
-      </svg>
-      <div class="strat-kick">/// the strategy build</div>
-      <div class="strat-h">Everything in this room, <em>customized</em> and <span class="blue">connected.</span></div>
-      <p class="strat-sub">Not a template. Impactable's strategy process takes the switcher thesis, the audience plan, and the channel motions and builds Clear Raven's <strong>customized marketing strategy and growth plan</strong>, the message and offer architecture per persona, the marketing-mix and budget distribution, and the signal and ABM infrastructure that makes it all compound.</p>
-      <div class="strat-body">
-        <div>
-          <div class="strat-incl-label">/// what the engagement includes</div>
-          <ul class="strat-incl">
-            <li>Customized marketing strategy and growth plan, built to Clear Raven's switcher thesis</li>
-            <li>Message and offer architecture per persona: what to say, what to put in front of them</li>
-            <li>Strategic guidance on marketing mix and budget distribution across LinkedIn and Google</li>
-            <li>Signals monitoring and ABM support, the Clay-scored switcher list operationalized</li>
-            <li>Competitor research and monitoring, the conquest layer kept sharp</li>
-            <li>DemandSense and full-funnel reporting, bi-weekly metrics and multi-channel insight</li>
-          </ul>
-        </div>
-        <div class="price-box">
-          <div class="price-label">/// strategy engagement</div>
-          <div class="price-num">$1.5k</div>
-          <div class="price-note">+ 15% of ad budget<br>$3k/mo minimum spend</div>
-          <a class="btn btn-primary" href="https://impactable.marketing/intelligence-room.html" target="_blank" rel="noopener">Start the Strategy Build →</a>
-          <a class="btn btn-blue" href="https://landbot.online/v3/H-2201417-SPMOARYH76NAHLP2/index.html" target="_blank" rel="noopener" style="margin-top:10px">Book a call →</a>
-        </div>
-      </div>
-      <p class="strat-fine">Figures reflect Impactable's Strategic tier (accounts up to $25k/mo). Final scope and inclusions are confirmed on a short call. Numbers here are indicative, not a quote.</p>
-    </div>
-  </section>
-
-  <!-- ENGAGEMENT LADDER -->
-  <section class="sec">
-    <div class="sec-num">04 / Where this goes</div>
-    <h2 class="sec-title">The path from <em>here.</em></h2>
-    <p class="sec-intro">Trust is earned at every step. The room delivered the diagnostics; the Strategy Build turns them into a plan; the plan becomes a build; the build gets managed and scaled.</p>
-    <div class="engage">
-      <div class="eng-step e1"><div class="eng-n">You are here</div><div class="eng-h">Diagnostics delivered</div><div class="eng-d">Targeting worksheet + shareable DOCX. Who to reach, in what order, across which channels. Validated before anything is built.</div></div>
-      <div class="eng-step e2"><div class="eng-n">Recommended next</div><div class="eng-h">The Strategy Build</div><div class="eng-d">Customized strategy and growth plan, message and offer architecture, mix and budget, signals and ABM.</div><div class="eng-price">$1.5k + 15% of ad budget</div></div>
-      <div class="eng-step e3"><div class="eng-n">Then</div><div class="eng-h">Campaign build</div><div class="eng-d">Creative briefs, build-ready specs, the Insight Tag, the Clay list, the conquest campaign, the retargeting engine, all stood up.</div></div>
-      <div class="eng-step e4"><div class="eng-n">Then</div><div class="eng-h">Manage &amp; scale</div><div class="eng-d">Ongoing strategic oversight, optimized against the efficiency-ladder benchmarks. Budget follows audience readiness.</div></div>
     </div>
   </section>
 
   <!-- RESOURCES -->
   <section class="sec">
-    <div class="sec-num">05 / Build on the doctrine</div>
+    <div class="sec-num">02 / Build on the doctrine</div>
     <h2 class="sec-title">The <em>thinking</em> behind the room.</h2>
     <p class="sec-intro">Every recommendation in this room is grounded in Impactable's published playbooks. Three worth reading.</p>
     <div class="res-grid">
@@ -492,18 +412,111 @@ a{color:inherit}
 
     <div class="next">
       <div class="next-label">/// ready when you are</div>
-      <div class="next-h">Audiences are set. Now the <em>system.</em></div>
-      <p class="next-body">The natural next move is the Strategy Build: the message and offer architecture, the marketing mix, and the signal infrastructure that make the switcher thesis land, customized to Clear Raven. Create. Connect. Capture.</p>
+      <div class="next-h">The thesis is proven. Now the <em>launch.</em></div>
+      <p class="next-body">The competitor intel names the white space and the worksheet names the audience. The Roadmap tab lays out the launch strategy, the channel motions, and the management options, with the two supporting documents to circulate internally. Create. Connect. Capture.</p>
       <div class="hero-cta" style="margin-top:0">
-        <a class="btn btn-primary" href="https://impactable.marketing/intelligence-room.html" target="_blank" rel="noopener">Start the Strategy Build →</a>
+        <button class="btn btn-primary" onclick="showView('roadmap')">View the roadmap →</button>
         <a class="btn btn-blue" href="https://landbot.online/v3/H-2201417-SPMOARYH76NAHLP2/index.html" target="_blank" rel="noopener">Book a call →</a>
-        <button class="btn btn-ghost" onclick="showView('worksheet')">Revisit the worksheet →</button>
       </div>
     </div>
   </section>
 
   <footer class="foot">
     <div class="foot-line">Impactable · LinkedIn Marketing Partner · Clear Raven Intelligence Room · June 2026 · impactable.com</div>
+  </footer>
+
+</div>
+</div>
+
+<!-- ============================================================= -->
+<!-- ================== VIEW: COMPETITOR INTEL =================== -->
+<!-- ============================================================= -->
+<div class="view" id="view-competitor">
+<div class="wrap">
+
+  <div class="wsbar">
+    <a class="back" onclick="showView('overview')">‹ Back to the room</a>
+    <div class="sp">
+      <a class="btn btn-ghost" href="https://docs.google.com/document/d/1Zwh8ZWE2z-AKu_Rf6AMtrBN5sZHxIebals4esfk6xOA/edit" target="_blank" rel="noopener" style="padding:12px 18px;font-size:11px">Full intel doc ↗</a>
+      <button class="btn btn-primary" onclick="showView('worksheet')" style="padding:12px 18px;font-size:11px">Audience worksheet →</button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" style="padding-top:40px">
+    <span class="tag">Competitor intelligence · prepared for Clear Raven</span>
+    <h1>The <span class="canopy">switcher</span> thesis,<br><span class="blue">evidenced.</span></h1>
+    <p class="hero-sub">The CMMS category is crowded, but it is not closed. The incumbents, <strong>UpKeep, MaintainX, Fiix, and Limble,</strong> win on brand and budget, then lose the operator at the wall: per-user fees, feature gating by tier, multi-site paywalls, and a guided-demo funnel that hides the product. That wall is Clear Raven's opening. <strong>No gates, better workflow, transparent pricing,</strong> aimed squarely at the buyer already shopping for a way out.</p>
+    <div class="hero-meta">
+      <span>Incumbents <strong>UpKeep · MaintainX · Fiix · Limble</strong></span>
+      <span>Category <strong>CMMS / maintenance</strong></span>
+      <span>Anchor <strong>the switcher thesis</strong></span>
+      <span>Source <strong>competitor intel doc</strong></span>
+    </div>
+  </section>
+
+  <!-- WHITE SPACE -->
+  <section class="sec">
+    <div class="sec-num">01 / The open lanes</div>
+    <h2 class="sec-title">Four places the incumbents <em>leave the door open.</em></h2>
+    <p class="sec-intro">Each lane is a pattern the category has trained buyers to resent. Clear Raven's positioning is built to occupy all four at once, and each maps to a persona and a message in the <a class="kb" onclick="showView('worksheet')" style="cursor:pointer">audience worksheet</a>.</p>
+    <div class="aud-grid">
+      <div class="aud-card">
+        <div class="aud-kicker">White space 01</div>
+        <div class="aud-name">No gates on features</div>
+        <div class="aud-why" style="margin-top:8px"><span class="lbl">▸ The incumbent wall</span>Core workflow features locked behind higher tiers, so teams pay to unlock what they assumed was included. Clear Raven's counter: <strong>every feature, every plan.</strong></div>
+      </div>
+      <div class="aud-card">
+        <div class="aud-kicker">White space 02</div>
+        <div class="aud-name">Transparent, no per-user fees</div>
+        <div class="aud-why" style="margin-top:8px"><span class="lbl">▸ The incumbent wall</span>Per-seat pricing punishes the exact behavior maintenance software should encourage, more technicians in the system. Clear Raven's counter: <strong>predictable pricing that doesn't tax adoption.</strong></div>
+      </div>
+      <div class="aud-card">
+        <div class="aud-kicker">White space 03</div>
+        <div class="aud-name">Try the real product</div>
+        <div class="aud-why" style="margin-top:8px"><span class="lbl">▸ The incumbent wall</span>A sales-gated, guided-demo funnel keeps the operator from touching the tool before a call. Clear Raven's counter: <strong>the actual product, not a scripted walkthrough.</strong></div>
+      </div>
+      <div class="aud-card">
+        <div class="aud-kicker">White space 04</div>
+        <div class="aud-name">Built for multi-site scale</div>
+        <div class="aud-why" style="margin-top:8px"><span class="lbl">▸ The incumbent wall</span>The multi-site and asset-count paywall is where growing teams hit the ceiling on a thin or free tier. Clear Raven's counter: <strong>scale without the escalation.</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPETITOR TEARDOWN -->
+  <section class="sec">
+    <div class="sec-num">02 / The incumbents</div>
+    <h2 class="sec-title">Who Clear Raven is <span class="blue">taking share from.</span></h2>
+    <p class="sec-intro" style="margin-bottom:0">The conquest layer targets the buyer actively leaving one of these. The friction column is the positioning pattern each is known for, the switcher trigger is the moment that pattern becomes a reason to leave. Named specifics and pricing live in the <a class="kb" href="https://docs.google.com/document/d/1Zwh8ZWE2z-AKu_Rf6AMtrBN5sZHxIebals4esfk6xOA/edit" target="_blank" rel="noopener">full competitor intel doc</a>.</p>
+    <table class="sig-table">
+      <tr><th>Incumbent</th><th>Where the operator hits friction</th><th>Clear Raven's counter</th><th>Switcher trigger</th></tr>
+      <tr><td class="sig">UpKeep</td><td>Tiered feature gating and per-user pricing as teams grow</td><td>Every feature on every plan, priced without per-seat penalties</td><td>"upkeep alternative" searched; renewal or seat-count increase</td></tr>
+      <tr><td class="sig">MaintainX</td><td>Higher tiers required to unlock reporting and advanced workflow</td><td>Full workflow and reporting out of the box</td><td>"maintainx alternative"; hitting a paywalled feature mid-rollout</td></tr>
+      <tr><td class="sig">Fiix</td><td>Enterprise-weight setup and cost for mid-market teams</td><td>Faster to stand up, no enterprise overhead to get value</td><td>"fiix alternative"; stalled implementation or over-scoped contract</td></tr>
+      <tr><td class="sig">Limble</td><td>Ease is the pitch, but scale and multi-site can escalate cost</td><td>Scales across sites without the tier-jump surprise</td><td>"limble alternative"; second site or asset-count ceiling reached</td></tr>
+    </table>
+    <p class="bench-src">Friction patterns reflect Impactable's competitor intelligence for Clear Raven and the category positioning in the intel doc. Exact tier names and prices shift, confirm against each vendor's current pricing before use in ad copy. Source: <a href="https://docs.google.com/document/d/1Zwh8ZWE2z-AKu_Rf6AMtrBN5sZHxIebals4esfk6xOA/edit" target="_blank" rel="noopener">Clear Raven competitor intel doc</a>.</p>
+  </section>
+
+  <!-- WHAT IT MEANS -->
+  <section class="sec">
+    <div class="sec-num">03 / What it means</div>
+    <h2 class="sec-title">The intel <em>sets the target.</em> The worksheet <span class="blue">names it.</span></h2>
+    <p class="sec-intro">The white space is the message; the switcher accounts are the audience. The audience worksheet operationalizes this intel: the Clay-scored switcher list is built from the technographic signal that an account already runs an incumbent, and the Google conquest layer catches "[competitor] alternative" the moment it is typed.</p>
+    <div class="next">
+      <div class="next-label">/// from intel to audience</div>
+      <div class="next-h">See how the thesis becomes a <em>build.</em></div>
+      <p class="next-body">The audience worksheet turns these four lanes into personas, signal overlays, and a keyword architecture. The Roadmap turns them into a launch.</p>
+      <div class="hero-cta" style="margin-top:0">
+        <button class="btn btn-primary" onclick="showView('worksheet')">Open the audience worksheet →</button>
+        <button class="btn btn-blue" onclick="showView('roadmap')">View the roadmap →</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-line">Impactable · LinkedIn Marketing Partner · Competitor Intel · Clear Raven · June 2026 · impactable.com</div>
   </footer>
 
 </div>
@@ -518,9 +531,8 @@ a{color:inherit}
   <div class="wsbar">
     <a class="back" onclick="showView('overview')">‹ Back to the room</a>
     <div class="sp">
-      <a class="btn btn-ghost" href="https://docs.google.com/document/d/1QFexURtt92Ot1tXaqCcLmjiGwFeTDUOiNCi40VfiHA8/edit" target="_blank" rel="noopener" style="padding:12px 18px;font-size:11px">Targeting doc ↗</a>
       <a class="btn btn-blue" href="https://landbot.online/v3/H-2201417-SPMOARYH76NAHLP2/index.html" target="_blank" rel="noopener" style="padding:12px 18px;font-size:11px">Book a call →</a>
-      <a class="btn btn-primary" href="https://impactable.marketing/intelligence-room.html" target="_blank" rel="noopener" style="padding:12px 18px;font-size:11px">Strategy Build →</a>
+      <button class="btn btn-primary" onclick="showView('roadmap')" style="padding:12px 18px;font-size:11px">Roadmap →</button>
     </div>
   </div>
 
@@ -771,13 +783,13 @@ a{color:inherit}
   <section class="sec" id="ws-next">
     <div class="sec-num">06 / What comes next</div>
     <h2 class="sec-title">Audiences are set. Now the <em>message.</em></h2>
-    <p class="sec-intro">This worksheet answers <strong style="color:var(--bone)">who</strong> and <strong style="color:var(--bone)">in what order.</strong> The Strategy Build answers what to say to each of them and what to put in front of them, customized to Clear Raven.</p>
+    <p class="sec-intro">This worksheet answers <strong style="color:var(--bone)">who</strong> and <strong style="color:var(--bone)">in what order.</strong> The Roadmap answers what happens next: the launch strategy, the channel motions, and the management options to run it.</p>
     <div class="next">
       <div class="next-label">/// recommended next step</div>
-      <div class="next-h">Turn this audience plan into a <em>launch-ready system.</em></div>
-      <p class="next-body">The message and offer architecture per persona, the marketing mix and budget distribution, and the signal and ABM infrastructure that make the no-gating thesis land. That is the Strategy Build. Create. Connect. Capture.</p>
+      <div class="next-h">Turn this audience plan into a <em>launch.</em></div>
+      <p class="next-body">The LinkedIn launch strategy, the channel motions it runs across, and the ongoing management options, with the supporting documents to circulate internally. That is the Roadmap. Create. Connect. Capture.</p>
       <div class="hero-cta" style="margin-top:0">
-        <a class="btn btn-primary" href="https://impactable.marketing/intelligence-room.html" target="_blank" rel="noopener">Start the Strategy Build →</a>
+        <button class="btn btn-primary" onclick="showView('roadmap')">View the roadmap →</button>
         <a class="btn btn-blue" href="https://landbot.online/v3/H-2201417-SPMOARYH76NAHLP2/index.html" target="_blank" rel="noopener">Book a call →</a>
         <button class="btn btn-ghost" onclick="showView('overview')">Back to the room →</button>
       </div>
@@ -786,6 +798,173 @@ a{color:inherit}
 
   <footer class="foot">
     <div class="foot-line">Prepared by Impactable · LinkedIn Marketing Partner · Targeting Worksheet · Clear Raven · June 2026 · impactable.com</div>
+  </footer>
+
+</div>
+</div>
+
+<!-- ============================================================= -->
+<!-- ===================== VIEW: ROADMAP ========================= -->
+<!-- ============================================================= -->
+<div class="view" id="view-roadmap">
+<div class="wrap">
+
+  <div class="wsbar">
+    <a class="back" onclick="showView('overview')">‹ Back to the room</a>
+    <div class="sp">
+      <a class="btn btn-ghost" href="https://impactable.marketing/pricing.html" target="_blank" rel="noopener" style="padding:12px 18px;font-size:11px">Full pricing ↗</a>
+      <a class="btn btn-primary" href="https://landbot.online/v3/H-2201417-SPMOARYH76NAHLP2/index.html" target="_blank" rel="noopener" style="padding:12px 18px;font-size:11px">Book a call →</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" style="padding-top:40px">
+    <span class="tag">The path forward · prepared for Clear Raven</span>
+    <h1>The <span class="canopy">roadmap</span><br><span class="outline">out of</span> <span class="blue">diagnostics.</span></h1>
+    <p class="hero-sub">Two portions of the strategy are already done, the competitor white space and the audience worksheet, delivered free. From here the path is short: a one-time <strong>LinkedIn launch strategy</strong> that turns the plan into a build, then <strong>ongoing management</strong> to run it. Because the diagnostics are already in hand, the strategy comes at a discount.</p>
+    <div class="hero-meta">
+      <span>You are here <strong>diagnostics delivered</strong></span>
+      <span>Next <strong>launch strategy · $999</strong></span>
+      <span>Then <strong>management · from $3k/mo</strong></span>
+      <span>Date <strong>June 30, 2026</strong></span>
+    </div>
+  </section>
+
+  <!-- THE PATH -->
+  <section class="sec">
+    <div class="sec-num">01 / Where this goes</div>
+    <h2 class="sec-title">The path from <em>here.</em></h2>
+    <p class="sec-intro">Trust is earned at every step. The room delivered the diagnostics; the launch strategy turns them into a plan; management runs and scales it. Nothing is built before the thesis is proven, and it is.</p>
+    <div class="engage">
+      <div class="eng-step e1"><div class="eng-n">You are here</div><div class="eng-h">Diagnostics delivered</div><div class="eng-d">Competitor intel + audience worksheet, the free Competitor Intel Report. The switcher thesis, proven and mapped.</div></div>
+      <div class="eng-step e2"><div class="eng-n">Recommended next</div><div class="eng-h">LinkedIn launch strategy</div><div class="eng-d">Positioning, messaging and offer architecture, and a build-ready 90-day roadmap Clear Raven owns.</div><div class="eng-price">$999 (normally $1,500)</div></div>
+      <div class="eng-step e3"><div class="eng-n">Then</div><div class="eng-h">Launch &amp; manage</div><div class="eng-d">A full-funnel strategist and execution pod stand up the launch and optimize it against the efficiency-ladder benchmarks.</div><div class="eng-price">from $3k/mo</div></div>
+      <div class="eng-step e4"><div class="eng-n">Then</div><div class="eng-h">Add channels &amp; scale</div><div class="eng-d">Layer Google conquest onto LinkedIn as one connected system. Budget follows audience readiness.</div></div>
+    </div>
+  </section>
+
+  <!-- THE LAUNCH STRATEGY OFFER -->
+  <section class="sec">
+    <div class="sec-num">02 / The recommended next step</div>
+    <h2 class="sec-title">The <span class="blue">LinkedIn launch</span> strategy.</h2>
+    <p class="sec-intro">Impactable's Foundational Strategy, scoped to Clear Raven's switcher thesis. It takes the intel and the worksheet and turns them into an operating plan: what to say, to whom, and how the launch runs. Normally $1,500, offered at <strong style="color:var(--bone)">$999</strong> because two portions of the strategy are already delivered.</p>
+    <div class="strat">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M 100 0 Q 80 20, 65 35 T 45 55 Q 30 70, 25 90" stroke="#D4FF3D" stroke-width="1.2" fill="none"/>
+        <circle cx="65" cy="35" r="3" fill="#D4FF3D"/><circle cx="45" cy="55" r="2.5" fill="#7BAA3E"/><circle cx="25" cy="90" r="3" fill="#1B9BD1"/>
+      </svg>
+      <div class="strat-kick">/// the launch strategy</div>
+      <div class="strat-h">Everything in this room, <em>built into a launch plan.</em></div>
+      <p class="strat-sub">Not a template. The strategy takes the switcher thesis, the four white-space lanes, and the audience plan and builds Clear Raven's <strong>launch-ready roadmap</strong>, the message and offer architecture per persona, and the channel and budget direction, yours to run in-house or hand to us.</p>
+      <div class="strat-body">
+        <div>
+          <div class="strat-incl-label">/// what the strategy includes</div>
+          <ul class="strat-incl">
+            <li>Positioning and competitive white space, sharpened from the intel doc</li>
+            <li>Audience and persona targeting, carried from the worksheet</li>
+            <li>Message and offer architecture per persona: what to say, what to put in front of them</li>
+            <li>Channel and funnel plan across LinkedIn and Google</li>
+            <li>A build-ready 90-day launch roadmap Clear Raven owns</li>
+          </ul>
+        </div>
+        <div class="price-box">
+          <div class="price-label">/// launch strategy · one-time</div>
+          <div class="price-num">$999</div>
+          <div class="price-note"><span style="text-decoration:line-through;opacity:0.6">$1,500</span> &nbsp;·&nbsp; two portions delivered</div>
+          <a class="btn btn-primary" href="https://landbot.online/v3/H-2201417-SPMOARYH76NAHLP2/index.html" target="_blank" rel="noopener">Book a call to start →</a>
+        </div>
+      </div>
+      <p class="strat-fine">The $999 rate reflects the free Competitor Intel Report already delivered (competitor white space + audience worksheet). Final scope is confirmed on a short call. Full pricing at impactable.marketing/pricing.html.</p>
+    </div>
+  </section>
+
+  <!-- ONGOING MANAGEMENT -->
+  <section class="sec">
+    <div class="sec-num">03 / Run it with us</div>
+    <h2 class="sec-title">Ongoing <em>management,</em> two ways to start.</h2>
+    <p class="sec-intro">When Clear Raven is ready to launch and run, management is a full-funnel strategist plus an execution pod, built to scale. $3,000/mo to start; the rate flexes with spend as the account grows. Pick the motion, the ad spend covered is the starting envelope.</p>
+    <div class="aud-grid">
+      <div class="aud-card abm">
+        <div class="aud-kicker">Motion 01 · one channel</div>
+        <div class="aud-name">LinkedIn <span style="color:var(--blue)">(or Google)</span></div>
+        <div class="aud-row" style="border-top:none"><span class="k">From</span><span class="v" style="font-family:'Archivo Black',sans-serif;font-size:22px;color:var(--canopy)">$3,000<span style="font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--chalk)">/mo</span></span></div>
+        <div class="aud-row"><span class="k">Ad spend</span><span class="v">up to $15k/mo covered</span></div>
+        <div class="aud-why"><span class="lbl">▸ Best for</span>Launching the switcher playbook on the qualification engine first: warm-first retargeting, the Clay-scored ABM list, and selective cold, run and optimized end to end.</div>
+      </div>
+      <div class="aud-card abm">
+        <div class="aud-kicker">Motion 02 · two channels, one system</div>
+        <div class="aud-name">LinkedIn <span style="color:var(--clay)">+ Google</span></div>
+        <div class="aud-row" style="border-top:none"><span class="k">From</span><span class="v" style="font-family:'Archivo Black',sans-serif;font-size:22px;color:var(--canopy)">$3,000<span style="font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--chalk)">/mo</span></span></div>
+        <div class="aud-row"><span class="k">Ad spend</span><span class="v">up to $10k/mo combined</span></div>
+        <div class="aud-why"><span class="lbl">▸ Best for</span>The compound engine: Google conquest catches "[competitor] alternative" the moment it is typed while LinkedIn qualifies and nurtures, sharing signals and audiences. The trifecta a LinkedIn-only shop can't run.</div>
+      </div>
+    </div>
+    <div class="budget-cap" style="margin-top:18px">
+      <b>Illustrative starting points.</b> Spend envelopes and the exact rate are set on the scoping call; management flexes from 15% down to 7% of ad spend as budgets scale. See the full breakdown at <a href="https://impactable.marketing/pricing.html" target="_blank" rel="noopener" style="color:var(--blue)">impactable.marketing/pricing.html</a>.
+    </div>
+  </section>
+
+  <!-- THE CHANNELS -->
+  <section class="sec">
+    <div class="sec-num">04 / How it runs</div>
+    <h2 class="sec-title">One buyer. <span class="blue">Every</span> channel <em>they touch.</em></h2>
+    <p class="sec-intro">The two channel motions, in Impactable's own words. LinkedIn as the qualification and nurture engine, Google as the demand-capture layer that catches the switcher mid-search. Explore each.</p>
+    <div class="chan-grid">
+      <a class="chan" href="https://impactable.marketing/linkedin-launch.html" target="_blank" rel="noopener">
+        <div class="chan-kick">Motion 01 · qualify &amp; nurture</div>
+        <div class="chan-h"><span class="blue">LinkedIn</span> launch</div>
+        <div class="chan-d">The warm-first architecture: retargeting tiers, the Clay-scored ABM switcher list, and the selective cold personas, all with Audience Expansion off and the ICP filtered tight. How the switcher gets qualified.</div>
+        <div class="chan-go">View the LinkedIn launch plan <span class="arr">→</span></div>
+      </a>
+      <a class="chan g" href="https://impactable.marketing/google.html" target="_blank" rel="noopener">
+        <div class="chan-kick">Motion 02 · capture demand</div>
+        <div class="chan-h"><span class="clay">LinkedIn + Google</span></div>
+        <div class="chan-d">The compound engine: Google conquest catches "[competitor] alternative" the moment it is typed, LinkedIn qualifies and nurtures, and the two share signals and audiences. The trifecta a LinkedIn-only shop can't run.</div>
+        <div class="chan-go">View the LinkedIn + Google motion <span class="arr">→</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- SUPPORTING DOCUMENTS -->
+  <section class="sec">
+    <div class="sec-num">05 / Supporting documents</div>
+    <h2 class="sec-title">The <em>leave-behinds.</em></h2>
+    <p class="sec-intro">The two delivered diagnostics as shareable documents, built to circulate internally at Clear Raven. Same content as the on-page tabs, in a form the team can forward and mark up.</p>
+    <div class="res-grid">
+      <a class="res-card" href="https://docs.google.com/document/d/1Zwh8ZWE2z-AKu_Rf6AMtrBN5sZHxIebals4esfk6xOA/edit" target="_blank" rel="noopener">
+        <div class="res-kicker">Document · delivered</div>
+        <div class="res-h">Competitor Intel Doc</div>
+        <div class="res-d">The switcher thesis and the four white-space lanes, with the incumbent teardown behind the conquest layer.</div>
+        <span class="res-link">Open the competitor intel doc ↗</span>
+      </a>
+      <a class="res-card" href="https://docs.google.com/document/d/1QFexURtt92Ot1tXaqCcLmjiGwFeTDUOiNCi40VfiHA8/edit" target="_blank" rel="noopener">
+        <div class="res-kicker">Document · delivered</div>
+        <div class="res-h">Audience Targeting Doc</div>
+        <div class="res-d">Personas, keyword architecture, negative keywords, budget framework, and the 90-day launch order.</div>
+        <span class="res-link">Open the audience targeting doc ↗</span>
+      </a>
+      <a class="res-card" href="https://impactable.marketing/pricing.html" target="_blank" rel="noopener">
+        <div class="res-kicker">Reference · pricing</div>
+        <div class="res-h">Full Impactable Pricing</div>
+        <div class="res-d">Every way to work with Impactable, from the free report through single-channel and multi-channel management.</div>
+        <span class="res-link">View full pricing ↗</span>
+      </a>
+    </div>
+
+    <div class="next">
+      <div class="next-label">/// ready when you are</div>
+      <div class="next-h">Two portions done. Let's <em>build the launch.</em></div>
+      <p class="next-body">The fastest path is a short call: we confirm scope, lock the $999 launch strategy, and line up the management motion that fits Clear Raven's budget. Create. Connect. Capture.</p>
+      <div class="hero-cta" style="margin-top:0">
+        <a class="btn btn-primary" href="https://landbot.online/v3/H-2201417-SPMOARYH76NAHLP2/index.html" target="_blank" rel="noopener">Book a call →</a>
+        <button class="btn btn-blue" onclick="showView('competitor')">Revisit the intel →</button>
+        <button class="btn btn-ghost" onclick="showView('overview')">Back to the room →</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-line">Prepared by Impactable · LinkedIn Marketing Partner · Roadmap · Clear Raven · June 2026 · impactable.com</div>
   </footer>
 
 </div>
