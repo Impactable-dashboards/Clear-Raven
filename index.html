@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clear Raven · Intelligence Room — Impactable</title>
+<meta name="description" content="Clear Raven's private intelligence room, prepared by Impactable. Audience targeting worksheet, channel plan, and the strategy build that comes next.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0D2D5E;--navy-deep:#071A38;--blue:#1B9BD1;--blue-soft:#5BB8E0;
+  --asphalt:#0A0A0C;--concrete:#15151A;--court:#22222A;--bone:#F4F1EA;--chalk:#D8D4C8;
+  --moss:#7BAA3E;--canopy:#D4FF3D;--terracotta:#C4521F;--hazard:#FF5A1F;--rust:#8B3A1A;--clay:#FFB627;--jet-pink:#FF2D7A;--plum:#5C2D6E;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--asphalt);color:var(--bone);-webkit-font-smoothing:antialiased;line-height:1.5}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(244,241,234,0.035) 1px,transparent 0);background-size:4px 4px;pointer-events:none;z-index:1}
+.wrap{max-width:1200px;margin:0 auto;padding:40px 32px;position:relative;z-index:2}
+a{color:inherit}
+
+/* ===== ROOM NAV ===== */
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,10,12,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--court)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:12px 32px;display:flex;align-items:center;gap:22px}
+.nav-logo{font-family:Arial,sans-serif;font-weight:900;font-size:15px;letter-spacing:-0.4px;white-space:nowrap;cursor:pointer}
+.nav-logo .imp{color:var(--bone)}.nav-logo .able{color:var(--blue)}
+.nav-logo .sep{color:var(--chalk);opacity:0.4;font-weight:400;margin:0 4px}
+.nav-logo .doc{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--canopy);letter-spacing:0.12em;text-transform:uppercase}
+.nav-tabs{display:flex;gap:4px;margin-left:auto;align-items:center;overflow-x:auto}
+.ntab{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--chalk);opacity:0.7;text-decoration:none;letter-spacing:0.14em;text-transform:uppercase;white-space:nowrap;padding:9px 13px;border:1px solid transparent;cursor:pointer;transition:all 0.2s;background:none;display:inline-flex;align-items:center;gap:6px}
+.ntab:hover{opacity:1;color:var(--bone);border-color:var(--court)}
+.ntab.active{opacity:1;color:var(--blue);border-color:var(--court);background:var(--concrete)}
+.ntab .ext{font-size:11px;opacity:0.7}
+.ntab-cta{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;padding:10px 16px;background:var(--canopy);color:var(--asphalt);font-weight:700;text-decoration:none;white-space:nowrap;transition:all 0.2s;border:1px solid var(--canopy)}
+.ntab-cta:hover{background:var(--bone);border-color:var(--bone)}
+
+/* view switching */
+.view{display:none}
+.view.active{display:block;animation:fade 0.4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===== HERO ===== */
+.hero{padding:64px 0 56px;border-bottom:1px solid var(--court);position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-120px;top:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(27,155,209,0.18),transparent 65%);pointer-events:none;z-index:0}
+.hero::before{content:'';position:absolute;left:-150px;bottom:-150px;width:360px;height:360px;background:radial-gradient(circle,rgba(212,255,61,0.10),transparent 65%);pointer-events:none;z-index:0}
+.hero>*{position:relative;z-index:2}
+.tag{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--moss);padding:6px 14px;border:1px solid var(--moss);margin-bottom:26px;background:rgba(10,10,12,0.7)}
+.tag::before{content:'';width:6px;height:6px;background:var(--moss);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero h1{font-family:'Archivo Black',sans-serif;font-size:clamp(42px,6.4vw,80px);line-height:0.92;letter-spacing:-0.035em;margin-bottom:26px;text-transform:uppercase;max-width:960px}
+.hero h1 .blue{color:var(--blue)}
+.hero h1 .canopy{color:var(--canopy);font-style:italic;display:inline-block;transform:skewX(-5deg)}
+.hero h1 .outline{-webkit-text-stroke:2px var(--bone);color:transparent}
+.hero-sub{font-size:18px;line-height:1.6;max-width:820px;color:var(--chalk);opacity:0.9;margin-bottom:30px}
+.hero-sub strong{color:var(--bone)}
+.hero-meta{display:flex;gap:26px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--chalk);opacity:0.6;letter-spacing:0.15em;text-transform:uppercase}
+.hero-meta strong{color:var(--blue);font-weight:700}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;padding:15px 24px;text-decoration:none;font-weight:700;transition:all 0.2s;display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid}
+.btn-primary{background:var(--canopy);color:var(--asphalt);border-color:var(--canopy)}
+.btn-primary:hover{background:var(--bone);border-color:var(--bone);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--bone);border-color:var(--court)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+.btn-blue{background:var(--blue);color:var(--navy-deep);border-color:var(--blue)}
+.btn-blue:hover{background:var(--blue-soft);border-color:var(--blue-soft);transform:translateY(-2px)}
+
+/* ===== SECTION SHELL ===== */
+.sec{padding:56px 0;border-bottom:1px solid var(--court);position:relative}
+.sec-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--jet-pink);letter-spacing:0.25em;margin-bottom:12px}
+.sec-title{font-family:'Archivo Black',sans-serif;font-size:clamp(26px,3.6vw,42px);line-height:0.96;letter-spacing:-0.025em;text-transform:uppercase;margin-bottom:18px}
+.sec-title em{color:var(--canopy);font-style:italic}
+.sec-title .blue{color:var(--blue)}
+.sec-title .terra{color:var(--terracotta)}
+.sec-intro{font-size:15px;line-height:1.65;max-width:860px;color:var(--chalk);opacity:0.85;margin-bottom:30px}
+.sec-intro a.kb{color:var(--blue);text-decoration:none;border-bottom:1px dotted var(--blue)}
+.sec-intro a.kb:hover{color:var(--canopy);border-color:var(--canopy)}
+.sub-title{font-family:'Archivo Black',sans-serif;font-size:20px;line-height:1;text-transform:uppercase;letter-spacing:-0.01em;margin:36px 0 8px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.sub-title .tierbadge{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;padding:4px 10px;border-radius:2px;font-weight:700}
+.tb-warm{background:rgba(212,255,61,0.14);color:var(--canopy);border:1px solid var(--moss)}
+.tb-abm{background:rgba(27,155,209,0.14);color:var(--blue);border:1px solid var(--blue)}
+.tb-cold{background:rgba(196,82,31,0.14);color:var(--hazard);border:1px solid var(--terracotta)}
+.sub-note{font-size:13.5px;color:var(--chalk);opacity:0.7;max-width:840px;margin-bottom:18px;line-height:1.55}
+
+/* ===== ROOM: WHAT'S INSIDE CARDS ===== */
+.room-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:8px}
+.rc{padding:28px 26px;background:var(--concrete);border-top:3px solid var(--blue);position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:270px}
+.rc::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.03) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
+.rc>*{position:relative;z-index:2}
+.rc.delivered{border-top-color:var(--canopy)}
+.rc.next{border-top-color:var(--terracotta)}
+.rc-status{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:14px;display:inline-flex;align-items:center;gap:7px}
+.rc.delivered .rc-status{color:var(--canopy)}
+.rc.next .rc-status{color:var(--terracotta)}
+.rc-status::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor}
+.rc-h{font-family:'Archivo Black',sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:-0.015em;line-height:1.02;margin-bottom:12px}
+.rc-d{font-size:13.5px;line-height:1.6;color:var(--chalk);opacity:0.85;margin-bottom:20px}
+.rc-foot{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
+.rc-link{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;padding:11px 16px;text-decoration:none;font-weight:700;border:1px solid;transition:all 0.2s;cursor:pointer}
+.rc.delivered .rc-link{color:var(--canopy);border-color:var(--moss)}
+.rc.delivered .rc-link:hover{background:var(--canopy);color:var(--asphalt)}
+.rc.next .rc-link{color:var(--terracotta);border-color:var(--terracotta)}
+.rc.next .rc-link:hover{background:var(--terracotta);color:var(--bone)}
+.rc .rc-link.solid-b{color:var(--blue);border-color:var(--blue)}
+.rc .rc-link.solid-b:hover{background:var(--blue);color:var(--navy-deep)}
+
+/* ===== CHANNEL BRIDGE ===== */
+.chan-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+.chan{display:block;padding:30px;background:var(--concrete);border-left:3px solid var(--blue);text-decoration:none;transition:all 0.2s;position:relative;overflow:hidden}
+.chan::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.025) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
+.chan>*{position:relative;z-index:2}
+.chan:hover{transform:translateY(-4px);border-left-color:var(--canopy);background:#1b1b22}
+.chan.g{border-left-color:var(--clay)}
+.chan-kick{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.chan.g .chan-kick{color:var(--clay)}
+.chan-h{font-family:'Archivo Black',sans-serif;font-size:24px;text-transform:uppercase;letter-spacing:-0.02em;line-height:1;margin-bottom:12px}
+.chan-h .blue{color:var(--blue)}.chan-h .clay{color:var(--clay)}
+.chan-d{font-size:13.5px;line-height:1.6;color:var(--chalk);opacity:0.82;margin-bottom:16px}
+.chan-go{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--bone);display:inline-flex;align-items:center;gap:8px}
+.chan-go .arr{transition:transform 0.2s}
+.chan:hover .chan-go .arr{transform:translateX(5px)}
+
+/* ===== STRATEGY BRIDGE (the big CTA) ===== */
+.strat{margin-top:8px;padding:48px;background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 100%);border:1px solid var(--blue);position:relative;overflow:hidden}
+.strat::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.04) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
+.strat svg{position:absolute;top:-30px;right:-30px;width:260px;height:260px;opacity:0.35;pointer-events:none}
+.strat>*{position:relative;z-index:2}
+.strat-kick{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--canopy);margin-bottom:14px}
+.strat-h{font-family:'Archivo Black',sans-serif;font-size:clamp(28px,3.6vw,44px);line-height:0.98;letter-spacing:-0.025em;text-transform:uppercase;margin-bottom:16px;max-width:780px}
+.strat-h em{color:var(--canopy);font-style:italic}
+.strat-h .blue{color:var(--blue)}
+.strat-sub{font-size:15px;line-height:1.65;max-width:720px;color:var(--chalk);opacity:0.9;margin-bottom:28px}
+.strat-sub strong{color:var(--bone)}
+.strat-body{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:start}
+.strat-incl-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+.strat-incl{list-style:none;padding:0}
+.strat-incl li{font-size:13.5px;line-height:1.5;color:var(--chalk);opacity:0.92;padding:10px 0 10px 26px;position:relative;border-bottom:1px solid rgba(255,255,255,0.08)}
+.strat-incl li:last-child{border-bottom:none}
+.strat-incl li::before{content:'';position:absolute;left:0;top:16px;width:12px;height:2px;background:var(--canopy)}
+.price-box{padding:28px;background:rgba(0,0,0,0.25);border:1px solid var(--court);text-align:center}
+.price-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--chalk);opacity:0.7;margin-bottom:10px}
+.price-num{font-family:'Archivo Black',sans-serif;font-size:56px;line-height:0.9;color:var(--canopy);letter-spacing:-0.03em}
+.price-note{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--chalk);opacity:0.7;margin:10px 0 22px;line-height:1.5}
+.price-box .btn{width:100%;justify-content:center}
+.strat-fine{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--chalk);opacity:0.55;margin-top:22px;line-height:1.6;letter-spacing:0.03em}
+
+/* ===== ENGAGEMENT LADDER ===== */
+.engage{margin-top:8px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0}
+.eng-step{padding:22px 20px;background:var(--concrete);border:1px solid var(--court);border-top-width:3px;position:relative}
+.eng-step.e1{border-top-color:var(--canopy)}.eng-step.e2{border-top-color:var(--terracotta)}
+.eng-step.e3{border-top-color:var(--blue)}.eng-step.e4{border-top-color:var(--moss)}
+.eng-n{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--chalk);opacity:0.5;margin-bottom:6px}
+.eng-h{font-family:'Archivo Black',sans-serif;font-size:15px;text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:6px;line-height:1.05}
+.eng-step.e1 .eng-h{color:var(--canopy)}.eng-step.e2 .eng-h{color:var(--terracotta)}.eng-step.e3 .eng-h{color:var(--blue)}.eng-step.e4 .eng-h{color:var(--moss)}
+.eng-d{font-size:12px;line-height:1.5;color:var(--chalk);opacity:0.8}
+.eng-price{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--clay);margin-top:8px}
+
+/* ===== WORKSHEET VIEW: subnav banner ===== */
+.wsbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:20px 0 0}
+.wsbar .back{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--chalk);opacity:0.7;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:7px}
+.wsbar .back:hover{opacity:1;color:var(--blue)}
+.wsbar .sp{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap}
+
+/* ===== INTERACTIVE LADDER ===== */
+.ladder{display:flex;align-items:stretch;gap:0;margin:28px 0 8px;flex-wrap:wrap}
+.rung{flex:1;min-width:150px;padding:18px 16px;background:var(--concrete);border:1px solid var(--court);border-left-width:3px;position:relative;cursor:pointer;transition:all 0.22s}
+.rung:hover{transform:translateY(-4px);background:#1b1b22}
+.rung.r1{border-left-color:var(--canopy)}.rung.r2{border-left-color:var(--moss)}
+.rung.r3{border-left-color:var(--blue)}.rung.r4{border-left-color:var(--terracotta)}
+.rung.r1.active{box-shadow:0 0 22px rgba(212,255,61,0.25),0 0 0 1px var(--canopy) inset}
+.rung.r2.active{box-shadow:0 0 22px rgba(123,170,62,0.22),0 0 0 1px var(--moss) inset}
+.rung.r3.active{box-shadow:0 0 22px rgba(27,155,209,0.22),0 0 0 1px var(--blue) inset}
+.rung.r4.active{box-shadow:0 0 22px rgba(196,82,31,0.22),0 0 0 1px var(--terracotta) inset}
+.rung-n{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--chalk);opacity:0.5;margin-bottom:6px}
+.rung-h{font-family:'Archivo Black',sans-serif;font-size:15px;text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:5px}
+.rung.r1 .rung-h{color:var(--canopy)}.rung.r2 .rung-h{color:var(--moss)}.rung.r3 .rung-h{color:var(--blue)}.rung.r4 .rung-h{color:var(--terracotta)}
+.rung-cpl{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;margin-bottom:6px}
+.rung.r1 .rung-cpl{color:var(--canopy)}.rung.r2 .rung-cpl{color:var(--moss)}.rung.r3 .rung-cpl{color:var(--blue)}.rung.r4 .rung-cpl{color:var(--hazard)}
+.rung-d{font-size:11.5px;line-height:1.45;color:var(--chalk);opacity:0.78}
+.rung-arrow{display:flex;align-items:center;color:var(--court);font-size:20px;padding:0 2px}
+.ladder-detail{margin-top:18px;padding:22px 24px;background:var(--concrete);border-left:3px solid var(--canopy);font-size:14px;line-height:1.6;color:var(--chalk);min-height:84px;transition:border-color 0.2s}
+.ladder-detail .ld-h{font-family:'Archivo Black',sans-serif;font-size:15px;text-transform:uppercase;letter-spacing:-0.01em;color:var(--bone);margin-bottom:6px}
+.ladder-detail .ld-bench{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--clay);margin-top:8px}
+.bench-src{font-size:12px;color:var(--chalk);opacity:0.6;margin-top:14px;font-style:italic}
+.bench-src a{color:var(--blue);text-decoration:none;border-bottom:1px dotted var(--blue)}
+
+/* PERSONA / AUDIENCE CARDS */
+.aud-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px;margin-top:8px}
+.aud-card{padding:24px;background:var(--concrete);border-top:3px solid var(--canopy);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.aud-card::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.03) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
+.aud-card>*{position:relative;z-index:2}
+.aud-card.abm{border-top-color:var(--blue)}
+.aud-card.cold{border-top-color:var(--terracotta)}
+.aud-kicker{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--canopy);margin-bottom:8px}
+.aud-card.abm .aud-kicker{color:var(--blue)}.aud-card.cold .aud-kicker{color:var(--terracotta)}
+.aud-name{font-family:'Archivo Black',sans-serif;font-size:19px;text-transform:uppercase;letter-spacing:-0.015em;line-height:1.05;margin-bottom:12px}
+.aud-rows{display:flex;flex-direction:column;gap:0;margin-bottom:12px}
+.aud-row{display:grid;grid-template-columns:96px 1fr;gap:10px;padding:7px 0;border-top:1px solid var(--court);font-size:12.5px;line-height:1.5}
+.aud-row .k{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--chalk);opacity:0.55;padding-top:2px}
+.aud-row .v{color:var(--chalk);opacity:0.92}
+.mono-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10.5px;background:var(--asphalt);color:var(--blue-soft);padding:2px 7px;margin:2px 4px 2px 0;border:1px solid var(--court);border-radius:2px}
+.aud-why{margin-top:auto;padding:12px;background:var(--asphalt);border-left:2px solid var(--canopy);font-size:12px;line-height:1.5;color:var(--bone)}
+.aud-card.abm .aud-why{border-left-color:var(--blue)}.aud-card.cold .aud-why{border-left-color:var(--terracotta)}
+.aud-why .lbl{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--canopy);display:block;margin-bottom:4px}
+.aud-card.abm .aud-why .lbl{color:var(--blue)}.aud-card.cold .aud-why .lbl{color:var(--terracotta)}
+.aud-size{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;color:var(--clay)}
+
+/* BUDGET INTERACTIVE */
+.budget{margin-top:30px;padding:28px;background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 100%);border:1px solid var(--blue);position:relative;overflow:hidden}
+.budget::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.04) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
+.budget>*{position:relative;z-index:2}
+.budget-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.budget-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--canopy)}
+.budget-toggle{display:flex;gap:4px;background:rgba(0,0,0,0.3);padding:4px;border:1px solid var(--court)}
+.bt-btn{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;padding:8px 14px;background:transparent;color:var(--chalk);border:none;cursor:pointer;transition:all 0.2s}
+.bt-btn.active{background:var(--canopy);color:var(--asphalt);font-weight:700}
+.budget-bar{display:flex;height:50px;border:1px solid var(--court);overflow:hidden;margin-bottom:16px}
+.budget-bar>div{display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;text-align:center;padding:0 6px;transition:flex 0.6s cubic-bezier(.7,0,.3,1);overflow:hidden;white-space:nowrap}
+.budget-bar .b-warm{background:var(--canopy);color:var(--asphalt)}
+.budget-bar .b-abm{background:var(--blue);color:var(--navy-deep)}
+.budget-bar .b-cold{background:var(--terracotta);color:var(--bone)}
+.budget-note{font-size:13.5px;line-height:1.6;color:var(--chalk);opacity:0.9}
+.budget-note strong{color:var(--bone)}
+.budget-cap{margin-top:14px;padding:12px 14px;background:rgba(255,90,31,0.08);border-left:2px solid var(--hazard);font-size:12.5px;line-height:1.5;color:var(--chalk)}
+.budget-cap b{color:var(--hazard)}
+
+/* TABLES */
+.sig-table,.kw-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+.sig-table th,.sig-table td,.kw-table th,.kw-table td{padding:12px 13px;text-align:left;border-bottom:1px solid var(--court);vertical-align:top;line-height:1.45}
+.sig-table th{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);border-bottom:1px solid var(--blue)}
+.sig-table td{color:var(--chalk);opacity:0.9}
+.sig-table td.sig{font-weight:700;color:var(--bone);opacity:1}
+.sig-table tr:hover td{background:rgba(255,255,255,0.025)}
+.kw-table th{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--canopy);border-bottom:1px solid var(--moss)}
+.kw-table td{color:var(--chalk);opacity:0.9}
+.kw-table td.kw{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--bone);opacity:1}
+.kw-table tr:hover td{background:rgba(255,255,255,0.025)}
+.intent-pill{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;padding:3px 9px;white-space:nowrap;border-radius:2px}
+.i-high{background:rgba(212,255,61,0.14);color:var(--canopy);border:1px solid var(--moss)}
+.i-med{background:rgba(255,182,39,0.13);color:var(--clay);border:1px solid var(--clay)}
+.i-low{background:rgba(120,120,130,0.15);color:var(--chalk);border:1px solid var(--court)}
+
+.workflow{margin-top:24px;padding:24px;background:var(--concrete);border-left:3px solid var(--moss);position:relative;overflow:hidden}
+.workflow::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.025) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
+.workflow>*{position:relative;z-index:2}
+.workflow-h{font-family:'Archivo Black',sans-serif;font-size:16px;text-transform:uppercase;letter-spacing:-0.01em;color:var(--moss);margin-bottom:10px}
+.workflow-steps{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.wstep{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--chalk);opacity:0.9}
+.wstep .n{font-family:'JetBrains Mono',monospace;font-size:10px;width:20px;height:20px;display:flex;align-items:center;justify-content:center;background:var(--moss);color:var(--asphalt);font-weight:700;border-radius:50%;flex-shrink:0}
+.wstep .arr{color:var(--court);margin:0 4px}
+
+.neg{margin-top:24px;padding:24px;background:var(--concrete);border-left:3px solid var(--terracotta)}
+.neg-h{font-family:'Archivo Black',sans-serif;font-size:16px;text-transform:uppercase;letter-spacing:-0.01em;color:var(--terracotta);margin-bottom:12px}
+.neg-row{display:grid;grid-template-columns:170px 1fr;gap:14px;padding:9px 0;border-top:1px solid var(--court);font-size:12.5px;line-height:1.5}
+.neg-row .k{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:var(--hazard)}
+.neg-row .v{color:var(--chalk);opacity:0.9}
+.neg-row .v .ng{font-family:'JetBrains Mono',monospace;color:var(--bone)}
+
+.rec{margin-top:24px;padding:26px;background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 100%);border:1px solid var(--canopy);position:relative;overflow:hidden}
+.rec::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.04) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
+.rec>*{position:relative;z-index:2}
+.rec-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--canopy);margin-bottom:10px}
+.rec-h{font-family:'Archivo Black',sans-serif;font-size:20px;text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:12px}
+.rec-h em{color:var(--canopy);font-style:italic}
+.rec ol{margin:0;padding-left:20px}
+.rec li{font-size:13.5px;line-height:1.7;color:var(--chalk);opacity:0.92;margin-bottom:4px}
+.rec li strong{color:var(--bone)}
+
+/* TIMELINE INTERACTIVE */
+.timeline{display:flex;gap:0;margin-top:28px;flex-wrap:wrap}
+.tl-step{flex:1;min-width:150px;padding:18px 16px;background:var(--concrete);border:1px solid var(--court);border-top-width:3px;border-top-color:var(--blue);cursor:pointer;transition:all 0.22s;position:relative}
+.tl-step:hover{background:#1b1b22;transform:translateY(-3px)}
+.tl-step.active{box-shadow:0 0 22px rgba(27,155,209,0.2),0 0 0 1px var(--blue) inset}
+.tl-when{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.tl-h{font-family:'Archivo Black',sans-serif;font-size:14px;text-transform:uppercase;letter-spacing:-0.01em;color:var(--bone);line-height:1.05}
+.tl-detail{margin-top:18px;padding:22px 24px;background:var(--concrete);border-left:3px solid var(--blue);font-size:14px;line-height:1.65;color:var(--chalk);min-height:70px}
+.tl-detail .td-h{font-family:'Archivo Black',sans-serif;font-size:15px;text-transform:uppercase;letter-spacing:-0.01em;color:var(--bone);margin-bottom:6px}
+.tl-detail b{color:var(--bone)}
+
+/* RESOURCES */
+.res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:8px}
+.res-card{display:block;padding:20px;background:var(--concrete);border-left:3px solid var(--blue);text-decoration:none;transition:all 0.2s}
+.res-card:hover{background:#1b1b22;transform:translateY(-3px);border-left-color:var(--canopy)}
+.res-kicker{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.res-h{font-family:'Inter',sans-serif;font-weight:800;font-size:15px;line-height:1.25;color:var(--bone);margin-bottom:8px}
+.res-d{font-size:12.5px;line-height:1.5;color:var(--chalk);opacity:0.78}
+.res-link{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--canopy);margin-top:10px;display:inline-block;word-break:break-all}
+
+.next{margin-top:30px;padding:40px;background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 100%);border:1px solid var(--blue);position:relative;overflow:hidden}
+.next::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.04) 1px,transparent 0);background-size:3px 3px;pointer-events:none}
+.next>*{position:relative;z-index:2}
+.next-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--canopy);margin-bottom:12px}
+.next-h{font-family:'Archivo Black',sans-serif;font-size:26px;text-transform:uppercase;letter-spacing:-0.015em;margin-bottom:14px;line-height:1.05}
+.next-h em{color:var(--canopy);font-style:italic}
+.next-body{font-size:14.5px;line-height:1.6;color:var(--chalk);opacity:0.9;max-width:820px;margin-bottom:22px}
+
+.foot{padding:44px 0 24px;text-align:center}
+.foot-line{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--chalk);opacity:0.4;letter-spacing:0.18em;text-transform:uppercase}
+
+@media(max-width:900px){
+  .strat-body{grid-template-columns:1fr;gap:22px}
+  .chan-grid{grid-template-columns:1fr}
+}
+@media(max-width:820px){
+  .wrap{padding:32px 20px}
+  .nav-inner{padding:12px 18px;gap:12px}
+  .nav-logo .doc{display:none}
+  .ladder,.timeline{flex-direction:column}.rung-arrow{transform:rotate(90deg);justify-content:center}
+  .neg-row,.aud-row{grid-template-columns:1fr}
+  .strat{padding:32px 24px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== ROOM NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-logo" onclick="showView('overview')"><span class="imp">IMPACT</span><span class="able">ABLE</span><span class="sep">///</span><span class="doc">Clear Raven · Intelligence Room</span></span>
+    <div class="nav-tabs">
+      <button class="ntab active" data-view="overview" onclick="showView('overview')">Overview</button>
+      <button class="ntab" data-view="worksheet" onclick="showView('worksheet')">Targeting Worksheet</button>
+      <a class="ntab" href="https://impactable.marketing/linkedin-launch.html" target="_blank" rel="noopener">LinkedIn Launch <span class="ext">↗</span></a>
+      <a class="ntab" href="https://impactable.marketing/google.html" target="_blank" rel="noopener">LinkedIn + Google <span class="ext">↗</span></a>
+      <a class="ntab-cta" href="https://impactable.com/paid-ads/" target="_blank" rel="noopener">Strategy Build →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================= -->
+<!-- ===================== VIEW: OVERVIEW ======================== -->
+<!-- ============================================================= -->
+<div class="view active" id="view-overview">
+<div class="wrap">
+
+  <section class="hero">
+    <span class="tag">Private intelligence room · prepared for Clear Raven</span>
+    <h1>The <span class="canopy">switcher</span><br>playbook.<br><span class="outline">Built to</span> <span class="blue">launch.</span></h1>
+    <p class="hero-sub">This room holds the diagnostics Impactable built for Clear Raven, and the path they open. The white space named the position: <strong>no gates, better workflow, aimed at the operator already shopping for a way out of a gated incumbent.</strong> Below: the audience plan that turns that thesis into a build, the channels it runs across, and the strategy engagement that makes it launch-ready.</p>
+    <div class="hero-cta">
+      <button class="btn btn-primary" onclick="showView('worksheet')">Open the targeting worksheet →</button>
+      <a class="btn btn-ghost" href="Clear_Raven_Targeting_Worksheet.docx" download>Download the DOCX ↓</a>
+    </div>
+    <div class="hero-meta" style="margin-top:32px">
+      <span>Prepared by <strong>Impactable</strong></span>
+      <span>Status <strong>LinkedIn Marketing Partner</strong></span>
+      <span>Anchor <strong>the switcher thesis</strong></span>
+      <span>Date <strong>June 30, 2026</strong></span>
+    </div>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section class="sec">
+    <div class="sec-num">01 / What's in this room</div>
+    <h2 class="sec-title">Delivered. And <em>what it unlocks.</em></h2>
+    <p class="sec-intro">Two diagnostics are already built and sitting in this room. The third item is the step they were designed to earn: a customized strategy build that turns the plan into a launch-ready system.</p>
+    <div class="room-cards">
+      <div class="rc delivered">
+        <div class="rc-status">Delivered</div>
+        <div class="rc-h">Interactive Targeting Worksheet</div>
+        <div class="rc-d">Who to reach and in what order, across LinkedIn native targeting, third-party signal overlays, and paid search, all sequenced by the audience efficiency ladder with published CPL benchmarks.</div>
+        <div class="rc-foot">
+          <button class="rc-link" onclick="showView('worksheet')">Open it →</button>
+        </div>
+      </div>
+      <div class="rc delivered">
+        <div class="rc-status">Delivered</div>
+        <div class="rc-h">The Shareable DOCX</div>
+        <div class="rc-d">The same worksheet as a branded, leave-behind document, built to circulate internally at Clear Raven: personas, keyword architecture, negative keywords, budget framework, and the 90-day launch order.</div>
+        <div class="rc-foot">
+          <a class="rc-link solid-b" href="Clear_Raven_Targeting_Worksheet.docx" download>Download ↓</a>
+        </div>
+      </div>
+      <div class="rc next">
+        <div class="rc-status">What's next</div>
+        <div class="rc-h">The Strategy Build</div>
+        <div class="rc-d">The worksheet answers who. The Strategy Build answers what to say to each of them, what to put in front of them, and how the whole ecosystem runs, customized to Clear Raven through Impactable's strategy process.</div>
+        <div class="rc-foot">
+          <a class="rc-link" href="#strategy" onclick="document.getElementById('strategy').scrollIntoView({behavior:'smooth'});return false;">See what it includes →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHANNEL BRIDGE -->
+  <section class="sec">
+    <div class="sec-num">02 / The channels it runs across</div>
+    <h2 class="sec-title">One buyer. <span class="blue">Every</span> channel <em>they touch.</em></h2>
+    <p class="sec-intro">The targeting plan is channel-agnostic on purpose. Here is how Impactable runs it, LinkedIn as the qualification and nurture engine, Google as the demand-capture layer that catches the switcher mid-search. Explore each motion.</p>
+    <div class="chan-grid">
+      <a class="chan" href="https://impactable.marketing/linkedin-launch.html" target="_blank" rel="noopener">
+        <div class="chan-kick">Motion 01 · qualify &amp; nurture</div>
+        <div class="chan-h"><span class="blue">LinkedIn</span> launch</div>
+        <div class="chan-d">The warm-first architecture: retargeting tiers, the Clay-scored ABM switcher list, and the selective cold personas, all with Audience Expansion off and the ICP filtered tight. How the switcher gets qualified.</div>
+        <div class="chan-go">View the LinkedIn launch plan <span class="arr">→</span></div>
+      </a>
+      <a class="chan g" href="https://impactable.marketing/google.html" target="_blank" rel="noopener">
+        <div class="chan-kick">Motion 02 · capture demand</div>
+        <div class="chan-h"><span class="clay">LinkedIn + Google</span></div>
+        <div class="chan-d">The compound engine: Google conquest catches "[competitor] alternative" the moment it is typed, LinkedIn qualifies and nurtures, and the two share signals and audiences. The trifecta a LinkedIn-only shop can't run.</div>
+        <div class="chan-go">View the LinkedIn + Google motion <span class="arr">→</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- STRATEGY BRIDGE (the push) -->
+  <section class="sec" id="strategy">
+    <div class="sec-num">03 / The recommended next step</div>
+    <h2 class="sec-title">Turn the plan into a <em>launch-ready system.</em></h2>
+    <p class="sec-intro">The diagnostics in this room prove the thesis and name the audience. The Strategy Build is where it becomes an operating plan Clear Raven can execute, customized end to end through Impactable's strategy process.</p>
+
+    <div class="strat">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M 100 0 Q 80 20, 65 35 T 45 55 Q 30 70, 25 90" stroke="#D4FF3D" stroke-width="1.2" fill="none"/>
+        <circle cx="65" cy="35" r="3" fill="#D4FF3D"/><circle cx="45" cy="55" r="2.5" fill="#7BAA3E"/><circle cx="25" cy="90" r="3" fill="#1B9BD1"/>
+      </svg>
+      <div class="strat-kick">/// the strategy build</div>
+      <div class="strat-h">Everything in this room, <em>customized</em> and <span class="blue">connected.</span></div>
+      <p class="strat-sub">Not a template. Impactable's strategy process takes the switcher thesis, the audience plan, and the channel motions and builds Clear Raven's <strong>customized marketing strategy and growth plan</strong>, the message and offer architecture per persona, the marketing-mix and budget distribution, and the signal and ABM infrastructure that makes it all compound.</p>
+      <div class="strat-body">
+        <div>
+          <div class="strat-incl-label">/// what the engagement includes</div>
+          <ul class="strat-incl">
+            <li>Customized marketing strategy and growth plan, built to Clear Raven's switcher thesis</li>
+            <li>Message and offer architecture per persona: what to say, what to put in front of them</li>
+            <li>Strategic guidance on marketing mix and budget distribution across LinkedIn and Google</li>
+            <li>Signals monitoring and ABM support, the Clay-scored switcher list operationalized</li>
+            <li>Competitor research and monitoring, the conquest layer kept sharp</li>
+            <li>DemandSense and full-funnel reporting, bi-weekly metrics and multi-channel insight</li>
+          </ul>
+        </div>
+        <div class="price-box">
+          <div class="price-label">/// strategy engagement</div>
+          <div class="price-num">$1.5k</div>
+          <div class="price-note">+ 15% of ad budget<br>$3k/mo minimum spend</div>
+          <a class="btn btn-primary" href="https://impactable.com/paid-ads/" target="_blank" rel="noopener">Start the Strategy Build →</a>
+        </div>
+      </div>
+      <p class="strat-fine">Figures reflect Impactable's Strategic tier (accounts up to $25k/mo). Final scope and inclusions are confirmed on a short call. Numbers here are indicative, not a quote.</p>
+    </div>
+  </section>
+
+  <!-- ENGAGEMENT LADDER -->
+  <section class="sec">
+    <div class="sec-num">04 / Where this goes</div>
+    <h2 class="sec-title">The path from <em>here.</em></h2>
+    <p class="sec-intro">Trust is earned at every step. The room delivered the diagnostics; the Strategy Build turns them into a plan; the plan becomes a build; the build gets managed and scaled.</p>
+    <div class="engage">
+      <div class="eng-step e1"><div class="eng-n">You are here</div><div class="eng-h">Diagnostics delivered</div><div class="eng-d">Targeting worksheet + shareable DOCX. Who to reach, in what order, across which channels. Validated before anything is built.</div></div>
+      <div class="eng-step e2"><div class="eng-n">Recommended next</div><div class="eng-h">The Strategy Build</div><div class="eng-d">Customized strategy and growth plan, message and offer architecture, mix and budget, signals and ABM.</div><div class="eng-price">$1.5k + 15% of ad budget</div></div>
+      <div class="eng-step e3"><div class="eng-n">Then</div><div class="eng-h">Campaign build</div><div class="eng-d">Creative briefs, build-ready specs, the Insight Tag, the Clay list, the conquest campaign, the retargeting engine, all stood up.</div></div>
+      <div class="eng-step e4"><div class="eng-n">Then</div><div class="eng-h">Manage &amp; scale</div><div class="eng-d">Ongoing strategic oversight, optimized against the efficiency-ladder benchmarks. Budget follows audience readiness.</div></div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="sec">
+    <div class="sec-num">05 / Build on the doctrine</div>
+    <h2 class="sec-title">The <em>thinking</em> behind the room.</h2>
+    <p class="sec-intro">Every recommendation in this room is grounded in Impactable's published playbooks. Three worth reading.</p>
+    <div class="res-grid">
+      <a class="res-card" href="https://impactable.com/linkedin-ads-funnel-benchmarks/" target="_blank" rel="noopener">
+        <div class="res-kicker">Benchmark · the ladder</div>
+        <div class="res-h">The LinkedIn Ads Funnel That Actually Scales</div>
+        <div class="res-d">Real CPL benchmarks from 200+ B2B SaaS accounts, the efficiency-ladder data behind the spend-warm-first principle.</div>
+        <span class="res-link">impactable.com/linkedin-ads-funnel-benchmarks</span>
+      </a>
+      <a class="res-card" href="https://impactable.com/the-power-of-third-party-custom-audiences/" target="_blank" rel="noopener">
+        <div class="res-kicker">Method · signals</div>
+        <div class="res-h">The Power of Third-Party Custom Audiences</div>
+        <div class="res-d">How technographic and intent overlays move targeting from looks-like-the-ICP to is-in-market-now.</div>
+        <span class="res-link">impactable.com/the-power-of-third-party-custom-audiences</span>
+      </a>
+      <a class="res-card" href="https://impactable.com/linkedin-software/" target="_blank" rel="noopener">
+        <div class="res-kicker">Tooling · WebID</div>
+        <div class="res-h">DemandSense — Demand-Gen Platform</div>
+        <div class="res-d">De-anonymize site visitors and name the companies behind pricing-page traffic, the engine behind warm Tier 1.</div>
+        <span class="res-link">impactable.com/linkedin-software</span>
+      </a>
+    </div>
+
+    <div class="next">
+      <div class="next-label">/// ready when you are</div>
+      <div class="next-h">Audiences are set. Now the <em>system.</em></div>
+      <p class="next-body">The natural next move is the Strategy Build: the message and offer architecture, the marketing mix, and the signal infrastructure that make the switcher thesis land, customized to Clear Raven. Create. Connect. Capture.</p>
+      <div class="hero-cta" style="margin-top:0">
+        <a class="btn btn-primary" href="https://impactable.com/paid-ads/" target="_blank" rel="noopener">Start the Strategy Build →</a>
+        <button class="btn btn-blue" onclick="showView('worksheet')">Revisit the worksheet →</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-line">Impactable · LinkedIn Marketing Partner · Clear Raven Intelligence Room · June 2026 · impactable.com</div>
+  </footer>
+
+</div>
+</div>
+
+<!-- ============================================================= -->
+<!-- ==================== VIEW: WORKSHEET ======================== -->
+<!-- ============================================================= -->
+<div class="view" id="view-worksheet">
+<div class="wrap">
+
+  <div class="wsbar">
+    <a class="back" onclick="showView('overview')">‹ Back to the room</a>
+    <div class="sp">
+      <a class="btn btn-ghost" href="Clear_Raven_Targeting_Worksheet.docx" download style="padding:12px 18px;font-size:11px">Download DOCX ↓</a>
+      <a class="btn btn-primary" href="https://impactable.com/paid-ads/" target="_blank" rel="noopener" style="padding:12px 18px;font-size:11px">Strategy Build →</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" style="padding-top:40px">
+    <span class="tag">Audience architecture · prepared for Clear Raven</span>
+    <h1>Who to <span class="canopy">reach.</span><br>And <span class="blue">in what order.</span></h1>
+    <p class="hero-sub">The white space named the position: <strong>no gates, better workflow, aimed at the switcher.</strong> This worksheet turns that into a build-ready audience plan across three layers, LinkedIn native targeting, third-party signal overlays, and paid search, all sequenced by Impactable's audience efficiency ladder. The throughline is one buyer: <strong>the operator already shopping for a way out of a gated incumbent.</strong></p>
+    <div class="hero-meta">
+      <span>Channels <strong>LinkedIn · Signals · Google</strong></span>
+      <span>Anchor <strong>the switcher thesis</strong></span>
+      <span>Start mode <strong>cold-start (build warm fast)</strong></span>
+      <span>Date <strong>June 30, 2026</strong></span>
+    </div>
+  </section>
+
+  <!-- LADDER -->
+  <section class="sec" id="ws-ladder">
+    <div class="sec-num">00 / The operating principle</div>
+    <h2 class="sec-title">Spend warm <span class="blue">before</span> you spend <em>cold.</em></h2>
+    <p class="sec-intro">Every dollar is allocated by intent. The closer an audience is to already knowing Clear Raven, the cheaper and higher-converting it is, a pattern Impactable has measured across <a class="kb" href="https://impactable.com/linkedin-ads-funnel-benchmarks/" target="_blank" rel="noopener">200+ B2B SaaS ad accounts</a>. The catch: Clear Raven starts close to cold, with little warm inventory and no detectable ad history. So the first job of cold and ABM spend is to manufacture a warm pool fast, then let retargeting do the efficient closing work. <strong style="color:var(--bone)">Click each rung</strong> to see the benchmark and the role it plays.</p>
+    <div class="ladder">
+      <div class="rung r1 active" data-rung="1"><div class="rung-n">Rung 01 · cheapest</div><div class="rung-h">CRM &amp; list</div><div class="rung-cpl">$75–$150 CPL</div><div class="rung-d">First-party uploads: trials, demos, sales lists.</div></div>
+      <div class="rung-arrow">›</div>
+      <div class="rung r2" data-rung="2"><div class="rung-n">Rung 02</div><div class="rung-h">Site &amp; engagers</div><div class="rung-cpl">$120–$250 CPL</div><div class="rung-d">Insight Tag visitors, ad engagers, video viewers.</div></div>
+      <div class="rung-arrow">›</div>
+      <div class="rung r3" data-rung="3"><div class="rung-n">Rung 03</div><div class="rung-h">ABM accounts</div><div class="rung-cpl">$250–$400 CPL</div><div class="rung-d">Named, signal-scored switcher accounts.</div></div>
+      <div class="rung-arrow">›</div>
+      <div class="rung r4" data-rung="4"><div class="rung-n">Rung 04 · priciest</div><div class="rung-h">Selective cold</div><div class="rung-cpl">$300–$600+ CPL</div><div class="rung-d">One ICP persona at a time, ~45–50K.</div></div>
+    </div>
+    <div class="ladder-detail" id="ladderDetail"></div>
+    <p class="bench-src">CPL ranges are Impactable's published efficiency-ladder benchmarks from 200+ B2B SaaS accounts. Source: <a href="https://impactable.com/linkedin-ads-funnel-benchmarks/" target="_blank" rel="noopener">The LinkedIn Ads Funnel That Actually Scales</a>. Clear Raven's actuals will land inside these bands as data accrues.</p>
+  </section>
+
+  <!-- CHANNEL 01: LINKEDIN -->
+  <section class="sec" id="ws-linkedin">
+    <div class="sec-num">01 / Channel one</div>
+    <h2 class="sec-title">LinkedIn native <em>architecture.</em></h2>
+    <p class="sec-intro">LinkedIn is the qualification and nurture engine, the only platform that lets a warm audience be filtered down to the exact ICP by title, seniority, and function. Built in three tiers. <strong style="color:var(--bone)">Always disable Audience Expansion.</strong> Always exclude competitors, existing customers, and non-ICP roles.</p>
+
+    <div class="sub-title"><span class="tierbadge tb-warm">Tier 1</span> Warm retargeting <span style="font-family:'Fraunces',serif;font-style:italic;font-size:16px;color:var(--canopy);text-transform:none;letter-spacing:0">highest priority</span></div>
+    <p class="sub-note">Thin today, which is the whole reason for the cold-start sequence. Stand the Insight Tag up on day one so the pool starts filling immediately. Start broad when building each pool, then layer ICP filters once it has size. Restrict the retargeting window to 90 days to keep saturation high.</p>
+    <div class="aud-grid">
+      <div class="aud-card">
+        <div class="aud-kicker">Warm 01 · build now</div>
+        <div class="aud-name">Website visitors (Insight Tag)</div>
+        <div class="aud-rows">
+          <div class="aud-row"><span class="k">Source</span><span class="v">LinkedIn Insight Tag (install day one)</span></div>
+          <div class="aud-row"><span class="k">ICP filter</span><span class="v"><span class="mono-tag">Seniority: Mgr+</span><span class="mono-tag">Function: Operations</span><span class="mono-tag">Eng / Facilities</span></span></div>
+          <div class="aud-row"><span class="k">Window</span><span class="v">90 days (tighten for saturation)</span></div>
+          <div class="aud-row"><span class="k">Size</span><span class="v aud-size">Builds with spend</span></div>
+        </div>
+        <div class="aud-why"><span class="lbl">▸ Why</span>Pricing-page and comparison-page visitors are the hottest signal Clear Raven can own. Pair with DemandSense / WebID to name the companies behind the visits.</div>
+      </div>
+      <div class="aud-card">
+        <div class="aud-kicker">Warm 02 · build now</div>
+        <div class="aud-name">Ad engagers &amp; video viewers</div>
+        <div class="aud-rows">
+          <div class="aud-row"><span class="k">Source</span><span class="v">Single-image &amp; video ad engagement, 50%+ views</span></div>
+          <div class="aud-row"><span class="k">ICP filter</span><span class="v"><span class="mono-tag">Seniority: Mgr+</span><span class="mono-tag">Industry: ICP set</span></span></div>
+          <div class="aud-row"><span class="k">Window</span><span class="v">90 days</span></div>
+          <div class="aud-row"><span class="k">Size</span><span class="v aud-size">Grows from cold/ABM reach</span></div>
+        </div>
+        <div class="aud-why"><span class="lbl">▸ Why</span>The direct output of the cold and ABM layers. This is where founder-voice and "no gates" content converts the attention it created upstream.</div>
+      </div>
+      <div class="aud-card">
+        <div class="aud-kicker">Warm 03 · highest intent</div>
+        <div class="aud-name">CRM &amp; trial/demo uploads</div>
+        <div class="aud-rows">
+          <div class="aud-row"><span class="k">Source</span><span class="v">Matched Audiences: trials, demos, sales lists, churned-from-competitor leads</span></div>
+          <div class="aud-row"><span class="k">ICP filter</span><span class="v"><span class="mono-tag">Function</span><span class="mono-tag">Seniority</span> layered post-upload</span></div>
+          <div class="aud-row"><span class="k">Match note</span><span class="v">Filter for active LinkedIn users; small lists need frequency caps</span></div>
+          <div class="aud-row"><span class="k">Size</span><span class="v aud-size">Confirm at build</span></div>
+        </div>
+        <div class="aud-why"><span class="lbl">▸ Why</span>The single highest-intent pool. Free-trial signups who did not convert and demo no-shows are pre-qualified switchers; retarget with the comparison and "we include what they charge for" message.</div>
+      </div>
+    </div>
+
+    <div class="sub-title"><span class="tierbadge tb-abm">Tier 2</span> ABM target accounts</div>
+    <p class="sub-note">The engine of the cold-start. A named, signal-scored account list is more efficient than broad cold targeting on a young budget because it gives a clean company-level read on engagement. Build it in Clay from the signals in Channel Two, then upload as a Matched Audience and layer person-level filters.</p>
+    <div class="aud-grid">
+      <div class="aud-card abm">
+        <div class="aud-kicker">ABM · primary</div>
+        <div class="aud-name">Switcher accounts (signal-scored)</div>
+        <div class="aud-rows">
+          <div class="aud-row"><span class="k">List source</span><span class="v">Clay-built: ICP firmographics + tech/hiring/intent signals (Ch. 2)</span></div>
+          <div class="aud-row"><span class="k">Person filter</span><span class="v"><span class="mono-tag">Maintenance Mgr</span><span class="mono-tag">Ops Mgr</span><span class="mono-tag">Facilities Dir</span><span class="mono-tag">Reliability</span></span></div>
+          <div class="aud-row"><span class="k">Seniority</span><span class="v"><span class="mono-tag">Manager</span><span class="mono-tag">Director</span><span class="mono-tag">VP</span></span></div>
+          <div class="aud-row"><span class="k">Size</span><span class="v aud-size">~300–1,500 accounts (tiered)</span></div>
+        </div>
+        <div class="aud-why"><span class="lbl">▸ Why</span>Accounts showing CMMS-buying signals (job posts for maintenance/reliability roles, incumbent tech detected) are the literal switcher list. This is where Clear Raven's whole thesis becomes an audience.</div>
+      </div>
+      <div class="aud-card abm">
+        <div class="aud-kicker">ABM · secondary</div>
+        <div class="aud-name">Multi-site / outgrown-free accounts</div>
+        <div class="aud-rows">
+          <div class="aud-row"><span class="k">List source</span><span class="v">Firms with 2+ sites or 50+ assets detected; using a free/entry CMMS tier</span></div>
+          <div class="aud-row"><span class="k">Person filter</span><span class="v"><span class="mono-tag">Ops / Facilities leadership</span></span></div>
+          <div class="aud-row"><span class="k">Size</span><span class="v aud-size">Confirm at build</span></div>
+        </div>
+        <div class="aud-why"><span class="lbl">▸ Why</span>The buyer hitting the incumbents' multi-site paywall is mid-escape. Clear Raven's no-gating story lands hardest exactly here.</div>
+      </div>
+    </div>
+
+    <div class="sub-title"><span class="tierbadge tb-cold">Tier 3</span> Selective cold <span style="font-family:'Fraunces',serif;font-style:italic;font-size:16px;color:var(--terracotta);text-transform:none;letter-spacing:0">one at a time</span></div>
+    <p class="sub-note">Run one cold persona at a time so the budget can actually saturate ~45–50K people. Persona 1 first; only add Persona 2 once the warm pool it feeds is established. Cold is awareness fuel, not the closer, keep it on MOF content, never hard offers.</p>
+    <div class="aud-grid">
+      <div class="aud-card cold">
+        <div class="aud-kicker">Cold persona 01 · lead</div>
+        <div class="aud-name">The Maintenance / Ops Leader</div>
+        <div class="aud-rows">
+          <div class="aud-row"><span class="k">Titles</span><span class="v"><span class="mono-tag">Maintenance Manager</span><span class="mono-tag">Maintenance Director</span><span class="mono-tag">Operations Manager</span></span></div>
+          <div class="aud-row"><span class="k">Seniority</span><span class="v"><span class="mono-tag">Manager</span><span class="mono-tag">Director</span></span></div>
+          <div class="aud-row"><span class="k">Function</span><span class="v"><span class="mono-tag">Operations</span><span class="mono-tag">Engineering</span></span></div>
+          <div class="aud-row"><span class="k">Industry</span><span class="v"><span class="mono-tag">Manufacturing</span><span class="mono-tag">Facilities</span><span class="mono-tag">Food &amp; Bev</span></span></div>
+          <div class="aud-row"><span class="k">Size</span><span class="v"><span class="mono-tag">51–1,000 employees</span></span></div>
+          <div class="aud-row"><span class="k">Exclude</span><span class="v"><span class="mono-tag">Competitors</span><span class="mono-tag">Customers</span><span class="mono-tag">Students/jobseekers</span></span></div>
+          <div class="aud-row"><span class="k">Est. size</span><span class="v aud-size">~45–55K (tune at build)</span></div>
+        </div>
+        <div class="aud-why"><span class="lbl">▸ White space link</span>The economic buyer who feels gating and price creep directly. Lead creative: "every feature, every plan." (WS 1, WS 4)</div>
+      </div>
+      <div class="aud-card cold">
+        <div class="aud-kicker">Cold persona 02 · phase two</div>
+        <div class="aud-name">The Facilities / Reliability Lead</div>
+        <div class="aud-rows">
+          <div class="aud-row"><span class="k">Titles</span><span class="v"><span class="mono-tag">Facilities Director</span><span class="mono-tag">Facilities Manager</span><span class="mono-tag">Reliability Engineer</span></span></div>
+          <div class="aud-row"><span class="k">Seniority</span><span class="v"><span class="mono-tag">Manager</span><span class="mono-tag">Director</span><span class="mono-tag">VP</span></span></div>
+          <div class="aud-row"><span class="k">Function</span><span class="v"><span class="mono-tag">Operations</span><span class="mono-tag">Real Estate / Facilities</span></span></div>
+          <div class="aud-row"><span class="k">Industry</span><span class="v"><span class="mono-tag">Property / FM</span><span class="mono-tag">Healthcare</span><span class="mono-tag">Light Industrial</span></span></div>
+          <div class="aud-row"><span class="k">Size</span><span class="v"><span class="mono-tag">51–1,000 employees</span></span></div>
+          <div class="aud-row"><span class="k">Est. size</span><span class="v aud-size">~40–50K (tune at build)</span></div>
+        </div>
+        <div class="aud-why"><span class="lbl">▸ White space link</span>The adoption owner. Lead creative: demonstrated workflow, "try the actual product, not a guided demo." (WS 3)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHANNEL 02: SIGNALS -->
+  <section class="sec" id="ws-signals">
+    <div class="sec-num">02 / Channel two</div>
+    <h2 class="sec-title">Third-party <em>signal</em> overlays.</h2>
+    <p class="sec-intro" style="margin-bottom:0">Native LinkedIn filters inevitably capture people outside the ICP. Signal overlays move targeting from "looks like the ICP" to "is actively in-market right now." These are the inputs to the Clay-built ABM list. Pick the top two or three, score accounts against them, then upload as a Matched Audience. More on the method: <a class="kb" href="https://impactable.com/the-power-of-third-party-custom-audiences/" target="_blank" rel="noopener">The Power of Third-Party Custom Audiences</a>.</p>
+    <table class="sig-table">
+      <tr><th>Signal</th><th>What it indicates</th><th>Why it matters for Clear Raven</th><th>Source</th></tr>
+      <tr><td class="sig">Technographic — incumbent CMMS detected</td><td>Account already runs UpKeep, MaintainX, Fiix, Limble, or a legacy tool</td><td>The literal switcher list. These accounts have a CMMS and a reason to leave one.</td><td>Wappalyzer, BuiltWith, ZoomInfo, Clay</td></tr>
+      <tr><td class="sig">Hiring — maintenance / reliability roles</td><td>Posting for maintenance planners, reliability engineers, facilities techs</td><td>Active investment in the maintenance function = active CMMS consideration window.</td><td>LinkedIn Jobs, Clay job-post triggers</td></tr>
+      <tr><td class="sig">Intent surge — CMMS / asset mgmt topics</td><td>Buying-committee research spiking on category topics</td><td>Catches the evaluation moment before they reach a competitor's demo form.</td><td>Bombora, 6sense, G2 intent</td></tr>
+      <tr><td class="sig">Review-site shopping — competitor pages</td><td>Activity on "UpKeep alternatives," competitor comparison pages</td><td>The clearest possible escape signal. Maps 1:1 to the switcher thesis.</td><td>G2 buyer intent, Capterra</td></tr>
+      <tr><td class="sig">Firmographic — multi-site / asset count</td><td>2+ sites or a sizeable asset base on a thin/free tool</td><td>The buyer hitting the multi-site paywall. No-gating message lands hardest.</td><td>Clay enrichment, Sales Nav</td></tr>
+      <tr><td class="sig">Funding — recent raise</td><td>Fresh capital, often paired with ops scaling and tooling upgrades</td><td>Buying capacity plus a reason to professionalize maintenance ops.</td><td>Crunchbase, Clay</td></tr>
+      <tr><td class="sig">Pain trigger — downtime / compliance event</td><td>Public incident, recall, audit, or expansion in asset-heavy industries</td><td>Urgency. A reactive-maintenance failure is the moment PM software gets bought.</td><td>News monitoring, industry feeds</td></tr>
+    </table>
+    <div class="workflow">
+      <div class="workflow-h">Enrichment workflow</div>
+      <p class="budget-note" style="opacity:0.85">Combine the top signals into one scored list, then activate it as a precise audience. This is how a young budget out-targets a bigger one.</p>
+      <div class="workflow-steps">
+        <span class="wstep"><span class="n">1</span> Pull ICP firmographic base</span><span class="arr">›</span>
+        <span class="wstep"><span class="n">2</span> Score in Clay on signals 1–4</span><span class="arr">›</span>
+        <span class="wstep"><span class="n">3</span> Keep highest-fit accounts</span><span class="arr">›</span>
+        <span class="wstep"><span class="n">4</span> Upload to LinkedIn as Matched Audience</span><span class="arr">›</span>
+        <span class="wstep"><span class="n">5</span> Layer person-level title/seniority filters</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHANNEL 03: SEARCH -->
+  <section class="sec" id="ws-search">
+    <div class="sec-num">03 / Channel three</div>
+    <h2 class="sec-title">Paid search <em>capture.</em></h2>
+    <p class="sec-intro" style="margin-bottom:0">Google captures demand that already exists. For Clear Raven the highest-value query in the entire market is the switcher in motion: someone typing "[competitor] alternative." Competitor conquest runs in its own campaign, exact match, with its own budget, so it never bleeds into broad terms. The intent pyramid below is funded top-down.</p>
+    <table class="kw-table" style="margin-top:18px">
+      <tr><th>Keyword theme</th><th>Intent</th><th>Buyer signal</th><th>Tactical note</th></tr>
+      <tr><td class="kw">"upkeep alternative" / "maintainx alternative"</td><td><span class="intent-pill i-high">High</span></td><td>Active escape from a named incumbent</td><td>Own campaign, exact match, dedicated budget. The #1 priority.</td></tr>
+      <tr><td class="kw">"limble alternative" / "fiix alternative"</td><td><span class="intent-pill i-high">High</span></td><td>Active escape, ease/price-driven</td><td>Same conquest campaign. Avoid trademark terms in ad copy; use in targeting only.</td></tr>
+      <tr><td class="kw">"cmms software with no per-user fees"</td><td><span class="intent-pill i-high">High</span></td><td>Pricing-pain, gating-aware</td><td>Lands directly on the no-gating differentiator. High-conviction landing page.</td></tr>
+      <tr><td class="kw">"cmms software for [manufacturing / facilities]"</td><td><span class="intent-pill i-high">High</span></td><td>Category + vertical qualifier, in-market</td><td>Core high-intent campaign. Vertical-matched ad groups.</td></tr>
+      <tr><td class="kw">"preventive maintenance software"</td><td><span class="intent-pill i-high">High</span></td><td>Solution-aware, evaluating</td><td>Exact + phrase. The category's primary ROI query.</td></tr>
+      <tr><td class="kw">"asset management software for maintenance teams"</td><td><span class="intent-pill i-high">High</span></td><td>Solution-aware</td><td>Brand-adjacent to Clear Raven's own naming. Strong fit.</td></tr>
+      <tr><td class="kw">"clear raven" (brand defense)</td><td><span class="intent-pill i-high">High</span></td><td>Already aware, navigating</td><td>Cheap, essential. Protect against competitor conquest on your own name.</td></tr>
+      <tr><td class="kw">"best cmms software" / "cmms comparison"</td><td><span class="intent-pill i-med">Medium</span></td><td>Comparison shopping, undecided</td><td>Higher volume, lower conviction. Comparison landing page, watch CPA.</td></tr>
+      <tr><td class="kw">"cmms pricing" / "how much does a cmms cost"</td><td><span class="intent-pill i-med">Medium</span></td><td>Price research, gating-frustrated</td><td>Transparent-pricing page is the perfect destination. White space 2 in action.</td></tr>
+      <tr><td class="kw">"work order software" / "maintenance scheduling software"</td><td><span class="intent-pill i-med">Medium</span></td><td>Feature-led, solution-aware</td><td>Phrase match, route to feature-specific pages.</td></tr>
+      <tr><td class="kw">"what is a cmms" / "preventive vs reactive maintenance"</td><td><span class="intent-pill i-low">Low</span></td><td>Education, early research</td><td>Content-only. Do NOT fund for conversion; feed retargeting instead.</td></tr>
+    </table>
+
+    <div class="rec">
+      <div class="rec-label">/// google: where to start</div>
+      <div class="rec-h">Fund the <em>top of the pyramid</em> first.</div>
+      <ol>
+        <li><strong>Start with 5–6 keywords:</strong> the two strongest competitor-conquest terms, "cmms software for [top vertical]," "preventive maintenance software," "cmms software with no per-user fees," and brand defense.</li>
+        <li><strong>Run conquest in its own exact-match campaign</strong> with a separate budget so it never competes with broad terms for spend.</li>
+        <li><strong>Point every high-intent ad at a conviction landing page</strong> built on the no-gating + transparent-pricing message, not the generic homepage.</li>
+      </ol>
+    </div>
+
+    <div class="neg">
+      <div class="neg-h">Negative keywords (mandatory)</div>
+      <div class="neg-row"><span class="k">Junk / non-commercial</span><span class="v"><span class="ng">free, freeware, jobs, salary, template, excel, spreadsheet, course, tutorial, certification</span></span></div>
+      <div class="neg-row"><span class="k">Wrong "raven"</span><span class="v"><span class="ng">raven software, ravens, raven tools, raven SEO, edgar allan</span> — protect against brand-name collisions surfaced in research</span></div>
+      <div class="neg-row"><span class="k">Wrong product category</span><span class="v"><span class="ng">digital asset management, IT asset management, crypto, financial assets, fixed asset accounting</span> — fence "asset management" to maintenance</span></div>
+      <div class="neg-row"><span class="k">Competitor routing</span><span class="v">Competitor brand terms as negatives on all <em>except</em> the conquest campaign, to keep intent segmented</span></div>
+      <div class="neg-row"><span class="k">High-intent tokens</span><span class="v"><span class="ng">software, platform, solution</span> as negatives on low/mid campaigns so high-intent traffic stays in the high-intent campaign</span></div>
+      <div class="neg-row"><span class="k">B2C / consumer</span><span class="v"><span class="ng">home, personal, app store, android, iphone game</span> — strip consumer noise</span></div>
+    </div>
+  </section>
+
+  <!-- BUDGET -->
+  <section class="sec" id="ws-budget">
+    <div class="sec-num">04 / Budget framework</div>
+    <h2 class="sec-title">The split <em>moves</em> as the warm pool fills.</h2>
+    <p class="sec-intro">Clear Raven is a cold start: minimal warm inventory, no detectable ad history. So warm gets a heavier-than-usual share early, precisely because the ABM and cold layers are manufacturing that warm pool in real time. As retargeting pools fill over the first 60–90 days, the split rebalances toward the standard warm-led allocation. <strong style="color:var(--bone)">Toggle to watch the shift.</strong></p>
+    <div class="budget">
+      <div class="budget-top">
+        <div class="budget-label">/// budget allocation · month over month</div>
+        <div class="budget-toggle">
+          <button class="bt-btn active" data-budget="m1">Month 1 · cold start</button>
+          <button class="bt-btn" data-budget="m3">Month 3 · warm-led</button>
+        </div>
+      </div>
+      <div class="budget-bar">
+        <div class="b-warm" id="bWarm" style="flex:40">40% · Warm</div>
+        <div class="b-abm" id="bAbm" style="flex:35">35% · ABM</div>
+        <div class="b-cold" id="bCold" style="flex:25">25% · Cold</div>
+      </div>
+      <p class="budget-note" id="budgetNote"><strong>Month 1 (cold start):</strong> 40 / 35 / 25. Warm is over-weighted relative to its small size because every ABM and cold impression is feeding the retargeting pool. The goal of month one is not conversion, it is manufacturing a warm audience worth retargeting.</p>
+      <div class="budget-cap">
+        <b>Budget not yet confirmed.</b> Under ~$3K/mo, collapse to a single channel and a single cold persona, do not split. Final tier dollars set once Luke confirms monthly spend.
+      </div>
+    </div>
+  </section>
+
+  <!-- 90 DAYS -->
+  <section class="sec" id="ws-start">
+    <div class="sec-num">05 / The first 90 days</div>
+    <h2 class="sec-title">Capture the in-market. <em>Build the warm.</em> Then scale.</h2>
+    <p class="sec-intro">A young account does one thing at a time, well. The sequence below builds the warm pool while capturing the highest-intent demand, so retargeting has something to retarget by month two. <strong style="color:var(--bone)">Click a phase</strong> to expand it.</p>
+    <div class="timeline">
+      <div class="tl-step active" data-step="1"><div class="tl-when">Week 1</div><div class="tl-h">Lay the tracking</div></div>
+      <div class="tl-step" data-step="2"><div class="tl-when">Weeks 1–2</div><div class="tl-h">Capture search</div></div>
+      <div class="tl-step" data-step="3"><div class="tl-when">Weeks 2–4</div><div class="tl-h">Launch cold + ABM</div></div>
+      <div class="tl-step" data-step="4"><div class="tl-when">Weeks 4–8</div><div class="tl-h">Turn on retargeting</div></div>
+      <div class="tl-step" data-step="5"><div class="tl-when">Weeks 8–12</div><div class="tl-h">Rebalance + scale</div></div>
+    </div>
+    <div class="tl-detail" id="tlDetail"></div>
+  </section>
+
+  <!-- WHAT COMES NEXT (worksheet-level) -->
+  <section class="sec" id="ws-next">
+    <div class="sec-num">06 / What comes next</div>
+    <h2 class="sec-title">Audiences are set. Now the <em>message.</em></h2>
+    <p class="sec-intro">This worksheet answers <strong style="color:var(--bone)">who</strong> and <strong style="color:var(--bone)">in what order.</strong> The Strategy Build answers what to say to each of them and what to put in front of them, customized to Clear Raven.</p>
+    <div class="next">
+      <div class="next-label">/// recommended next step</div>
+      <div class="next-h">Turn this audience plan into a <em>launch-ready system.</em></div>
+      <p class="next-body">The message and offer architecture per persona, the marketing mix and budget distribution, and the signal and ABM infrastructure that make the no-gating thesis land. That is the Strategy Build. Create. Connect. Capture.</p>
+      <div class="hero-cta" style="margin-top:0">
+        <a class="btn btn-primary" href="https://impactable.com/paid-ads/" target="_blank" rel="noopener">Start the Strategy Build →</a>
+        <button class="btn btn-blue" onclick="showView('overview')">Back to the room →</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-line">Prepared by Impactable · LinkedIn Marketing Partner · Targeting Worksheet · Clear Raven · June 2026 · impactable.com</div>
+  </footer>
+
+</div>
+</div>
+
+<script>
+// ===== View switching =====
+function showView(v){
+  document.querySelectorAll('.view').forEach(function(x){x.classList.remove('active')});
+  document.getElementById('view-'+v).classList.add('active');
+  document.querySelectorAll('.ntab').forEach(function(x){x.classList.remove('active')});
+  var t=document.querySelector('.ntab[data-view="'+v+'"]'); if(t){t.classList.add('active')}
+  window.scrollTo({top:0,behavior:'instant'});
+}
+
+// ===== Ladder detail =====
+var ladderData={
+  1:{c:'var(--canopy)',h:'Rung 01 · CRM &amp; list — the cheapest, highest-intent dollar',b:'First-party uploads: trials, demos, sales lists, churned-from-competitor leads. The closer an audience already is to Clear Raven, the cheaper the conversion. The catch today: this pool is thin. Stand it up on day one and feed it.',bench:'Benchmark CPL: $75–$150 (Warm 1P / BOFU)'},
+  2:{c:'var(--moss)',h:'Rung 02 · Site &amp; engagers — built as spend runs',b:'Insight Tag visitors, ad engagers, video viewers, page followers. This pool does not exist yet, it is manufactured by the ABM and cold layers above it. By month two it becomes the most efficient closing audience in the account.',bench:'Benchmark CPL: $120–$250 (Warm 1P / MOFU)'},
+  3:{c:'var(--blue)',h:'Rung 03 · ABM accounts — the engine of the cold start',b:'A named, signal-scored switcher list is more efficient than broad cold on a young budget because it gives a clean company-level read on engagement. This is the layer that fills rungs 1 and 2.',bench:'Benchmark CPL: $250–$400 (Intent/Fit ABM)'},
+  4:{c:'var(--terracotta)',h:'Rung 04 · Selective cold — awareness fuel, not the closer',b:'One ICP persona at a time, saturating ~45–50K people on MOF content. Cold is the priciest dollar in the account, so it earns its budget only by feeding the warmer rungs, never by being asked to convert directly.',bench:'Benchmark CPL: $300–$600+ (Very Cold Native)'}
+};
+function setLadder(n){
+  var d=ladderData[n],el=document.getElementById('ladderDetail');
+  el.style.borderLeftColor=d.c;
+  el.innerHTML='<div class="ld-h" style="color:'+d.c+'">'+d.h+'</div>'+d.b+'<div class="ld-bench">▸ '+d.bench+'</div>';
+  document.querySelectorAll('.rung').forEach(function(r){r.classList.remove('active')});
+  document.querySelector('.rung[data-rung="'+n+'"]').classList.add('active');
+}
+document.querySelectorAll('.rung').forEach(function(r){r.addEventListener('click',function(){setLadder(this.getAttribute('data-rung'))})});
+setLadder(1);
+
+// ===== Budget toggle =====
+var budgetData={
+  m1:{warm:40,abm:35,cold:25,note:'<strong>Month 1 (cold start):</strong> 40 / 35 / 25. Warm is over-weighted relative to its small size because every ABM and cold impression is feeding the retargeting pool. The goal of month one is not conversion, it is manufacturing a warm audience worth retargeting.'},
+  m3:{warm:60,abm:25,cold:15,note:'<strong>Month 3 (warm-led):</strong> 60 / 25 / 15. Once retargeting pools are populated, budget follows audience readiness. The efficient warm tier now carries the conversion load while ABM sustains the pipeline and a single cold persona keeps topping up the funnel.'}
+};
+function setBudget(k){
+  var d=budgetData[k];
+  document.getElementById('bWarm').style.flex=d.warm;document.getElementById('bWarm').textContent=d.warm+'% · Warm';
+  document.getElementById('bAbm').style.flex=d.abm;document.getElementById('bAbm').textContent=d.abm+'% · ABM';
+  document.getElementById('bCold').style.flex=d.cold;document.getElementById('bCold').textContent=d.cold+'% · Cold';
+  document.getElementById('budgetNote').innerHTML=d.note;
+  document.querySelectorAll('.bt-btn').forEach(function(b){b.classList.remove('active')});
+  document.querySelector('.bt-btn[data-budget="'+k+'"]').classList.add('active');
+}
+document.querySelectorAll('.bt-btn').forEach(function(b){b.addEventListener('click',function(){setBudget(this.getAttribute('data-budget'))})});
+
+// ===== Timeline =====
+var tlData={
+  1:{h:'Week 1 · lay the tracking',b:'Install the LinkedIn Insight Tag and the Google tag. The warm pool cannot build until tracking is live. Stand up <b>DemandSense / WebID</b> on the pricing and comparison pages to name the companies behind anonymous visits from day one.'},
+  2:{h:'Weeks 1–2 · capture the search',b:'Launch <b>Google conquest + high-intent search</b> (5–6 keywords). This captures switchers who are already searching, on day one, and immediately starts seeding site-visitor retargeting.'},
+  3:{h:'Weeks 2–4 · launch cold + ABM',b:'Build the <b>Clay-scored ABM switcher list</b> and launch LinkedIn cold Persona 1 plus the ABM audience. This is the awareness layer that manufactures the warm pool the rest of the plan depends on.'},
+  4:{h:'Weeks 4–8 · turn on retargeting',b:'As site visitors, ad engagers, and video viewers accumulate, switch on <b>LinkedIn warm retargeting</b> with the comparison and "we include what they gate" message. The efficient closing work begins.'},
+  5:{h:'Weeks 8–12 · rebalance + scale',b:'Rebalance budget toward the now-populated warm tier (toward <b>60/25/15</b>). Add cold Persona 2 only once Persona 1\'s pool is established. Budget follows audience readiness, not the calendar.'}
+};
+function setTL(n){
+  var d=tlData[n],el=document.getElementById('tlDetail');
+  el.innerHTML='<div class="td-h">'+d.h+'</div>'+d.b;
+  document.querySelectorAll('.tl-step').forEach(function(s){s.classList.remove('active')});
+  document.querySelector('.tl-step[data-step="'+n+'"]').classList.add('active');
+}
+document.querySelectorAll('.tl-step').forEach(function(s){s.addEventListener('click',function(){setTL(this.getAttribute('data-step'))})});
+setTL(1);
+</script>
+</body>
+</html>
